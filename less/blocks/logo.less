@@ -13,3 +13,56 @@
     display: block;
   }
 }
+
+.title__btns,
+.title__wrap {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.title__list {
+  width: 18px;
+  height: 10px;
+  background-image: url(../img/icon-list.png);
+  background-repeat: no-repeat;
+  opacity: 0.3;
+  
+  &:hover,
+  &:active {
+    opacity: 1;
+  }
+}
+
+.title__plate {
+  width: 19px;
+  height: 14px;
+  margin-right: 30px;
+  margin-left: 40px;
+  background-image: url(../img/icon-plate.png);
+  background-repeat: no-repeat;
+  opacity: 0.3;
+  
+  &:hover,
+  &:active {
+    opacity: 1;
+  }
+}
+
+.title__btn-active {
+  opacity: 1;
+}
+
+.title__btns {
+  position: relative;
+  
+  &::after {
+    content: "/";
+    position: absolute;
+    top: 0;
+    left: 32%;
+    color: #fff;
+    font-size: 18px;
+    font-weight: 400;;
+  }
+}
