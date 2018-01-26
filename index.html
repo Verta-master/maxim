@@ -13,7 +13,7 @@
         <img src="img/logo.png" alt="Logo" width="42" height="39">
         <p>Marugin Maxim</p>
       </div>
-      <nav class="menu">
+      <nav class="menu menu--closed">
         <button type="button" class="menu__btn">НАВИГАЦИЯ</button>
         <ul class="menu__list">
           <li class="menu__item">
@@ -23,21 +23,33 @@
             <a href="who.html" class="menu__link">КТО Я</a>
           </li>
           <li class="menu__item">
-            <a href="trainings.html" class="menu__link menu__link--more">ТРЕНИНГИ</a>
+            <a href="trainings.html" class="menu__link">ТРЕНИНГИ
+              <img src="img/ic_more_horiz_white_24px.svg" alt="ТРЕНИНГИ" width="24" height="24">
+            </a>
             <ul class="menu__sublist">
               <li class="menu__subitem">
-                <a href="#" class="menu__sublink">Манифестация и Изобилие</a>
+                <a href="#" class="menu__link">Манифестация и Изобилие</a>
               </li>
               <li class="menu__subitem">
-                <a href="#" class="menu__sublink">Раскрытие творческой силы</a>
+                <a href="#" class="menu__link">Раскрытие творческой силы</a>
               </li>
               <li class="menu__subitem">
-                <a href="#" class="menu__sublink">Предназначение и Следование Божественному Расписанию</a>
+                <a href="#" class="menu__link">Предназначение и Следование Божественному Расписанию</a>
               </li>
             </ul>
           </li>
           <li class="menu__item">
-            <a href="blog.html" class="menu__link menu__link--more">БЛОГ</a>
+            <a href="blog.html" class="menu__link">БЛОГ
+              <img src="img/ic_more_horiz_white_24px.svg" alt="БЛОГ" width="24" height="24">
+            </a>
+            <ul class="menu__sublist">
+              <li class="menu__subitem">
+                <a href="#" class="menu__link">Пункт 1</a>
+              </li>
+              <li class="menu__subitem">
+                <a href="#" class="menu__link">Пункт 2</a>
+              </li>
+            </ul>
           </li>
           <li class="menu__item">
             <a href="timetable.html" class="menu__link">РАСПИСАНИЕ</a>
@@ -46,27 +58,43 @@
             <a href="collaboration.html" class="menu__link">СОТРУДНИЧЕСТВО</a>
           </li>
           <li class="menu__item">
-            <a href="news.html" class="menu__link menu__link--more">НОВОСТИ</a>
+            <a href="news.html" class="menu__link">НОВОСТИ
+              <img src="img/ic_more_horiz_white_24px.svg" alt="НОВОСТИ" width="24" height="24">
+            </a>
+            <ul class="menu__sublist">
+              <li class="menu__subitem">
+                <a href="#" class="menu__link">Пункт 1</a>
+              </li>
+              <li class="menu__subitem">
+                <a href="#" class="menu__link">Пункт 2</a>
+              </li>
+            </ul>
           </li>
           <li class="menu__item">
             <a href="contacts.html" class="menu__link">КОНТАКТЫ</a>
           </li>
         </ul>
       </nav>
-      <a href="#" class="location">КРАСНОДАР</a>
+      <a href="#" class="header__link location">КРАСНОДАР</a>
     </div>
     <div class="header__block">
       <a href="#" class="header__link">СОТРУДНИЧЕСТВО</a>
-      <a href="#" class="btn">ЗАПИСЬ НА ТРЕНИНГ</a>
+      <a href="#" class="btn header__btn">ЗАПИСЬ НА ТРЕНИНГ</a>
       <ul class="social-btns">
         <li class="social-btns__item">
-          <a href="#"><span class="visually-hidden">Youtube</span></a>
+          <a href="#">
+            <img src="img/icon-youtube.png" alt="Youtube" width="10" height="12">
+          </a>
         </li>
         <li class="social-btns__item">
-          <a href="#"><span class="visually-hidden">VKontakte</span></a>
+          <a href="#">
+            <img src="img/icon-vk.png" alt="VKontakte" width="14" height="12">
+          </a>
         </li>
         <li class="social-btns__item">
-          <a href="#"><span class="visually-hidden">Instagram</span></a>
+          <a href="#">
+            <img src="img/icon-instagram.png" alt="Instagram" width="15" height="15">
+          </a>
         </li>
       </ul>
     </div>
@@ -77,7 +105,7 @@
       <div class="promo__block">
         <h1>МАКСИМ МАРУГИН</h1>
         <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa.</p>
-        <a href="#" class="btn">ЗАПИСЬ НА ТРЕНИНГ</a>
+        <a href="#" class="btn-full promo__btn">ЗАПИСЬ НА ТРЕНИНГ</a>
       </div>
       <footer class="promo__footer">
         <p>© Copyright maxim marugin</p>
@@ -270,110 +298,114 @@
       </div>
     </section>
     
-    <section class="blog wrapper">
-      <h2>БЛОГ</h2>
-      <ul class="blog__list">
-        <li class="blog__item">
-          <figure class="blog__img">
-            <img src="img/img-2.jpg" alt="" width="370" height="218">
-          </figure>
-          <h3>поступки на которые мы способны</h3>
-          <div class="blog__info">
-            <time datetime="2017-12-17" class="blog__date">17.12.2017</time>
-            <p class="blog__number">/ Просмотров: <span>346</span></p>
-          </div>
-          <p>Данные тренинг не является тренингом по ТетаХилинг Института THINK, однако в нём используются техники ТетаХилинг и...</p>
-          <p class="blog__author">Разместил: <span>Максим Маругин</span></p>
-          <a href="#" class="btn blog__btn">ЧИТАТЬ ДАЛЕЕ</a>
-        </li>
-        <li class="blog__item">
-          <figure class="blog__img">
-            <img src="img/img-2.jpg" alt="" width="370" height="218">
-          </figure>
-          <h3>поступки на которые мы НЕТ) </h3>
-          <div class="blog__info">
-            <time datetime="2017-12-17" class="blog__date">17.12.2017</time>
-            <p class="blog__number">/ Просмотров: <span>346</span></p>
-          </div>
-          <p>Данные тренинг не является тренингом по ТетаХилинг Института THINK, однако в нём используются техники ТетаХилинг и...</p>
-          <p class="blog__author">Разместил: <span>Максим Маругин</span></p>
-          <a href="#" class="btn blog__btn">ЧИТАТЬ ДАЛЕЕ</a>
-        </li>
-        <li class="blog__item">
-          <figure class="blog__img">
-            <img src="img/img-2.jpg" alt="" width="370" height="218">
-          </figure>
-          <h3>поступки на которые мы способны</h3>
-          <div class="blog__info">
-            <time datetime="2017-12-17" class="blog__date">17.12.2017</time>
-            <p class="blog__number">/ Просмотров: <span>346</span></p>
-          </div>
-          <p>Данные тренинг не является тренингом по ТетаХилинг Института THINK, однако в нём используются техники ТетаХилинг и...</p>
-          <p class="blog__author">Разместил: <span>Максим Маругин</span></p>
-          <a href="#" class="btn blog__btn">ЧИТАТЬ ДАЛЕЕ</a>
-        </li>
-      </ul>
-      <a href="#" class="nav-link">ПЕРЕЙТИ В БЛОГ</a>
-    </section>
+    <div class="main-bg">
     
-    <section class="social wrapper">
-      <h2>СОЦИАЛЬНЫЕ СЕТИ</h2>
-      <div class="social__block">
-        <p>Подпишитесь на мои профили в социальных сетях и применяйте мощые инструменты от Максима Маругина уже сегодня. Крутые техники в твоей ленте каждый день!</p>
-        <ul class="social__list">
-          <li class="social__item">
-            <a href="#" class="social__link social__link--yt">YOUTUBE</a>
+      <section class="blog wrapper">
+        <h2>БЛОГ</h2>
+        <ul class="blog__list">
+          <li class="blog__item">
+            <figure class="blog__img">
+              <img src="img/img-2.jpg" alt="" width="370" height="218">
+            </figure>
+            <h3>поступки на которые мы способны</h3>
+            <div class="blog__info">
+              <time datetime="2017-12-17" class="blog__date">17.12.2017</time>
+              <p class="blog__number">/ Просмотров: <span>346</span></p>
+            </div>
+            <p>Данные тренинг не является тренингом по ТетаХилинг Института THINK, однако в нём используются техники ТетаХилинг и...</p>
+            <p class="blog__author">Разместил: <span>Максим Маругин</span></p>
+            <a href="#" class="btn blog__btn">ЧИТАТЬ ДАЛЕЕ</a>
           </li>
-          <li class="social__item">
-            <a href="#" class="social__link social__link--vk">ВКОНТАКТЕ</a>
+          <li class="blog__item">
+            <figure class="blog__img">
+              <img src="img/img-2.jpg" alt="" width="370" height="218">
+            </figure>
+            <h3>поступки на которые мы НЕТ) </h3>
+            <div class="blog__info">
+              <time datetime="2017-12-17" class="blog__date">17.12.2017</time>
+              <p class="blog__number">/ Просмотров: <span>346</span></p>
+            </div>
+            <p>Данные тренинг не является тренингом по ТетаХилинг Института THINK, однако в нём используются техники ТетаХилинг и...</p>
+            <p class="blog__author">Разместил: <span>Максим Маругин</span></p>
+            <a href="#" class="btn blog__btn">ЧИТАТЬ ДАЛЕЕ</a>
           </li>
-          <li class="social__item">
-            <a href="#" class="social__link social__link--in">INSTAGRAM</a>
+          <li class="blog__item">
+            <figure class="blog__img">
+              <img src="img/img-2.jpg" alt="" width="370" height="218">
+            </figure>
+            <h3>поступки на которые мы способны</h3>
+            <div class="blog__info">
+              <time datetime="2017-12-17" class="blog__date">17.12.2017</time>
+              <p class="blog__number">/ Просмотров: <span>346</span></p>
+            </div>
+            <p>Данные тренинг не является тренингом по ТетаХилинг Института THINK, однако в нём используются техники ТетаХилинг и...</p>
+            <p class="blog__author">Разместил: <span>Максим Маругин</span></p>
+            <a href="#" class="btn blog__btn">ЧИТАТЬ ДАЛЕЕ</a>
           </li>
         </ul>
-        <a href="#" class="btn social__btn">ПЕРЕЙТИ К КОНТАКТАМ</a>
-      </div>
-    </section>
-  </main>
-  
-  <footer class="footer wrapper">
-    <div class="footer__top">
-      <div class="footer__logo">
-        <div class="logo">
-          <img src="img/logo.png" alt="Logo" width="42" height="39">
-          <p>Marugin Maxim</p>
+        <a href="#" class="nav-link">ПЕРЕЙТИ В БЛОГ</a>
+      </section>
+
+      <section class="social wrapper">
+        <h2>СОЦИАЛЬНЫЕ СЕТИ</h2>
+        <div class="social__block">
+          <p>Подпишитесь на мои профили в социальных сетях и применяйте мощые инструменты от Максима Маругина уже сегодня. Крутые техники в твоей ленте каждый день!</p>
+          <ul class="social__list">
+            <li class="social__item">
+              <a href="#" class="social__link social__link--yt">YOUTUBE</a>
+            </li>
+            <li class="social__item">
+              <a href="#" class="social__link social__link--vk">ВКОНТАКТЕ</a>
+            </li>
+            <li class="social__item">
+              <a href="#" class="social__link social__link--in">INSTAGRAM</a>
+            </li>
+          </ul>
+          <a href="#" class="btn social__btn">ПЕРЕЙТИ К КОНТАКТАМ</a>
         </div>
-        <form action="#" method="post" class="footer__subscribe">
-          <input type="text" name="email" class="footer__input" placeholder="ВВЕДИТЕ ВАШ EMAIL">
-          <button type="submit" class="footer__btn">ПОДПИСАТЬСЯ НА НОВОСТИ</button>
-        </form>
-      </div>
-      <div class="footer__contacts">
-        <h3>КОНТАКТЫ</h3>
-        <p class="footer__address">Телефон: <a href="Tel:+79964098278">+7 (996) 409-82-78</a></p>
-        <p class="footer__address">Email: <a href="mailto:laylaydigital@gmail.com">laylaydigital@gmail.com</a></p>
-        <p class="footer__address">Адрес офиса: Новороссийск</p>
-      </div>
-      <div class="footer__social">
-        <h3>СОЦИАЛЬНЫЕ СЕТИ</h3>
-        <ul class="social-btns">
-          <li class="social-btns__item">
-            <a href="#"><span class="visually-hidden">Youtube</span></a>
-          </li>
-          <li class="social-btns__item">
-            <a href="#"><span class="visually-hidden">VKontakte</span></a>
-          </li>
-          <li class="social-btns__item">
-            <a href="#"><span class="visually-hidden">Instagram</span></a>
-          </li>
-        </ul>
-      </div>
+      </section>
+
+      <footer class="footer wrapper">
+        <div class="footer__top">
+          <div class="footer__logo">
+            <div class="logo">
+              <img src="img/logo.png" alt="Logo" width="42" height="39">
+              <p>Marugin Maxim</p>
+            </div>
+            <form action="#" method="post" class="footer__subscribe">
+              <input type="text" name="email" class="footer__input" placeholder="ВВЕДИТЕ ВАШ EMAIL">
+              <button type="submit" class="footer__btn">ПОДПИСАТЬСЯ НА НОВОСТИ</button>
+            </form>
+          </div>
+          <div class="footer__contacts">
+            <h3>КОНТАКТЫ</h3>
+            <p class="footer__address">Телефон: <a href="Tel:+79964098278">+7 (996) 409-82-78</a></p>
+            <p class="footer__address">Email: <a href="mailto:laylaydigital@gmail.com">laylaydigital@gmail.com</a></p>
+            <p class="footer__address">Адрес офиса: Новороссийск</p>
+          </div>
+          <div class="footer__social">
+            <h3>СОЦИАЛЬНЫЕ СЕТИ</h3>
+            <ul class="social-btns">
+              <li class="social-btns__item">
+                <a href="#"><span class="visually-hidden">Youtube</span></a>
+              </li>
+              <li class="social-btns__item">
+                <a href="#"><span class="visually-hidden">VKontakte</span></a>
+              </li>
+              <li class="social-btns__item">
+                <a href="#"><span class="visually-hidden">Instagram</span></a>
+              </li>
+            </ul>
+          </div>
+        </div>
+        <div class="footer__bottom">
+          <p>Все права защищены. Копирайт Максим Маругин</p>
+          <a href="#"><img src="img/logo-laylay.png" alt="Lay Lay" width="107" height="42"></a>
+        </div>
+      </footer>
+
     </div>
-    <div class="footer__bottom">
-      <p>Все права защищены. Копирайт Максим Маругин</p>
-      <a href="#"><img src="img/logo-laylay.png" alt="Lay Lay" width="107" height="42"></a>
-    </div>
-  </footer>
+  </main>
   
   <script src="js/script.js"></script>
 </body>
