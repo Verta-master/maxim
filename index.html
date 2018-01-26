@@ -225,54 +225,54 @@
               <button type="button" class="title__plate"><span class="visually-hidden">Плитка</span></button>
             </div>
           </div>
-          <table class="timetable__list">
-            <tr class="timetable__header">
-              <th>ДАТА</th>
-              <th>ГОРОД</th>
-              <th>ГОРОД</th>
-              <th>СТОИМОСТЬ</th>
-            </tr>
-            <tr class="timetable_row">
-              <td>99.99.99</td>
-              <td>НОВОРОССИЙСК</td>
-              <td>БАЗОВЫЙ КУРС «thetahealing»</td>
-              <td>ОТ 25.000</td>
-              <td>
-                <a class="btn-blue timetable__btn timetable__btn--order">ПОДРОБНЕЕ</a>
-                <a class="btn timetable__order">ЗАПИСЬ</a>
-              </td>
-            </tr>
-            <tr class="timetable_row">
-              <td>99.99.99</td>
-              <td>НОВОРОССИЙСК</td>
-              <td>БАЗОВЫЙ КУРС «thetahealing»</td>
-              <td>5.000</td>
-              <td>
-                <a class="btn-blue timetable__btn">ПОДРОБНЕЕ</a>
-                <p class="timetable__noplace">НЕТ МЕСТ</p>
-              </td>
-            </tr>
-            <tr class="timetable_row">
-              <td>99.99.99</td>
-              <td>НОВОРОССИЙСК</td>
-              <td>БАЗОВЫЙ КУРС «thetahealing»</td>
-              <td>5.000</td>
-              <td>
-                <a class="btn-blue timetable__btn">ПОДРОБНЕЕ</a>
-                <p class="timetable__noplace">НЕТ МЕСТ</p>
-              </td>
-            </tr>
-            <tr class="timetable_row">
-              <td>99.99.99</td>
-              <td>НОВОРОССИЙСК</td>
-              <td>БАЗОВЫЙ КУРС «thetahealing»</td>
-              <td>5.000</td>
-              <td>
-                <a class="btn-blue timetable__btn">ПОДРОБНЕЕ</a>
-                <p class="timetable__noplace">НЕТ МЕСТ</p>
-              </td>
-            </tr>
-          </table>
+          <ul class="timetable__list">
+            <li class="timetable__header">
+              <p>ДАТА</p>
+              <p>ГОРОД</p>
+              <p>ГОРОД</p>
+              <p>СТОИМОСТЬ</p>
+            </li>
+            <li class="timetable__row">
+              <p>99.99.99</p>
+              <p>НОВОРОССИЙСК</p>
+              <p>БАЗОВЫЙ КУРС «thetahealing»</p>
+              <p>ОТ 25.000</p>
+              <p class="timetable__btns timetable__btns--order">
+                <a href="#" class="btn-blue timetable__btn timetable__btn--order">ПОДРОБНЕЕ</a>
+                <a href="#" class="timetable__order">ЗАПИСЬ</a>
+              </p>
+            </li>
+            <li class="timetable__row">
+              <p>99.99.99</p>
+              <p>НОВОРОССИЙСК</p>
+              <p>БАЗОВЫЙ КУРС «thetahealing»</p>
+              <p>5.000</p>
+              <p class="timetable__btns">
+                <a href="#" class="btn-blue timetable__btn">ПОДРОБНЕЕ</a>
+                <span class="timetable__noplace">НЕТ МЕСТ</span>
+              </p>
+            </li>
+            <li class="timetable__row">
+              <p>99.99.99</p>
+              <p>НОВОРОССИЙСК</p>
+              <p>БАЗОВЫЙ КУРС «thetahealing»</p>
+              <p>5.000</p>
+              <p class="timetable__btns">
+                <a href="#" class="btn-blue timetable__btn">ПОДРОБНЕЕ</a>
+                <span class="timetable__noplace">НЕТ МЕСТ</span>
+              </p>
+            </li>
+            <li class="timetable__row">
+              <p>99.99.99</p>
+              <p>НОВОРОССИЙСК</p>
+              <p>БАЗОВЫЙ КУРС «thetahealing»</p>
+              <p>5.000</p>
+              <p class="timetable__btns">
+                <a href="#" class="btn-blue timetable__btn">ПОДРОБНЕЕ</a>
+                <span class="timetable__noplace">НЕТ МЕСТ</span>
+              </p>
+            </li>
+          </ul>
           <a href="#" class="nav-link">ПЕРЕЙТИ В ПОЛНОЕ РАСПИСАНИЕ</a>
         </article>
       </div>
@@ -290,12 +290,12 @@
         <form action="#" method="post" class="subscribe">
           <div class="subscribe__field">
             <input type="email" name="email" class="subscribe__input" placeholder="ВВЕДИТЕ ВАШ EMAIL">
-            <button type="submit" class="subscribe__btn">ПОЛУЧАТЬ РАССЫЛКУ</button>
+            <button type="submit" class="btn-blue subscribe__btn">ПОЛУЧАТЬ РАССЫЛКУ</button>
           </div>
-          <input type="checkbox" name="policy" id="policy" class="subscribe__check">
+          <input type="checkbox" name="policy" id="policy" class="subscribe__check" checked>
           <label for="policy" class="subscribe__label">Нажимая на кнопку «ПОЛУЧАТЬ РАССЫЛКУ», я даю согласие на обработку персональных данных и соглашаюсь с <a href="#">политика конфиденциальности</a></label>
-          <input type="checkbox" name="advert" id="advert" class="subscribe__check">
-          <label for="advert" class="subscribe__label">Я согласен на получение рекламной информации от Максима Маругина</label>
+          <input type="checkbox" name="advert" id="advert" class="subscribe__check" checked>
+          <label for="advert" class="subscribe__label">Я согласен на получение рекламной информации<br>от Максима Маругина</label>
         </form>
       </div>
     </section>
