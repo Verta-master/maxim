@@ -21,7 +21,7 @@ circles.on('appear', function() {
   if (!circle.data('inited')) {
     $('#circle1').circleProgress({
       value: 0.13,
-      size: 144,
+      size: 150,
       startAngle: -Math.PI/2,
       reverse: true,
       thickness: 3,
@@ -33,7 +33,7 @@ circles.on('appear', function() {
 
     $('#circle2').circleProgress({
       value: 0.47,
-      size: 144,
+      size: 150,
       startAngle: -Math.PI/2,
       reverse: true,
       thickness: 3,
@@ -45,7 +45,7 @@ circles.on('appear', function() {
 
     $('#circle3').circleProgress({
       value: 0.71,
-      size: 144,
+      size: 150,
       startAngle: -Math.PI/2,
       reverse: true,
       thickness: 3,
@@ -57,7 +57,7 @@ circles.on('appear', function() {
 
     $('#circle4').circleProgress({
       value: 0.07,
-      size: 144,
+      size: 150,
       startAngle: -Math.PI/2,
       reverse: true,
       thickness: 3,
@@ -69,7 +69,7 @@ circles.on('appear', function() {
 
     $('#circle5').circleProgress({
       value: 0.38,
-      size: 144,
+      size: 150,
       startAngle: -Math.PI/2,
       reverse: true,
       thickness: 3,
