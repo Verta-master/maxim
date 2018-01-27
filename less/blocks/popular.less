@@ -1,7 +1,3 @@
-.popular {
-  
-}
-
 .popular__list {
   width: 100%;
 }
@@ -11,43 +7,49 @@
   display: flex;
   justify-content: space-between;
   align-items: flex-start;
-  border-radius: 20px;
+  border-radius: 23px;
   background-color: rgb(255, 255, 255);
-  overflow: hidden;
+  
+  &:last-child {
+    margin-bottom: 25px;
+  }
 }
 
 .popular__img {
   width: 470px;
   height: 438px;
+  border-radius: 0 20px 20px 0;
 }
 
 .popular__text {
   width: 700px;
   height: 438px;
   padding-left: 100px;
-  padding-top: 40px;
-  padding-bottom: 45px;
+  padding-top: 45px;
+  padding-bottom: 50px;
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
   align-items: flex-start;
   color: #676767;
   
-  breadcrumbs {
-    margin-bottom: 50px;
+  .breadcrumbs {
+    margin-bottom: 25px;
   }
   
   h4 {
+    margin-bottom: 5px;
     font-size: 18px;
     line-height: 30px;
     font-weight: 700;
     color: #333333;
+    letter-spacing: 2px;
     text-transform: uppercase;
     max-width: 470px;
   }
   
   p {
-    max-width: 420px;
+    max-width: 400px;
   }
 }
 
@@ -64,6 +66,7 @@
   margin-right: 60px;
   padding-right: 30px;
   position: relative;
+  letter-spacing: 3px;
   box-shadow: 0px 5px 16.92px 1.08px rgba(0, 0, 0, 0.19);
   
   &::after {
@@ -83,7 +86,7 @@
 .popular__place {
   font-size: 12px;
   text-transform: uppercase;
-  letter-spacing: 1px;
+  letter-spacing: 3px;
   font-weight: 700;
   color: #cbcbcb;
   position: relative;
