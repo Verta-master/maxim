@@ -1900,3 +1900,49 @@ h3 {
       -ms-flex-pack: start;
           justify-content: flex-start;
 }
+@media (max-width: 1229px) {
+  .wrapper {
+    width: 100%;
+  }
+  .menu__btn {
+    font-size: 0;
+    margin-left: 30px;
+    margin-right: 30px;
+    padding: 0;
+    background-position: center;
+  }
+  .value__list {
+    width: 100%;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+  }
+  .popular__text {
+    padding-left: 50px;
+  }
+  .timetable__row p:nth-of-type(3) {
+    width: 300px;
+    padding-right: 10px;
+  }
+  .timetable__noplace {
+    text-align: center;
+    margin-right: 10px;
+    margin-left: 10px;
+  }
+  .blog__item {
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 30px;
+  }
+  .blog__item:nth-child(3n) {
+    margin-right: auto;
+  }
+  .footer__logo {
+    width: auto;
+  }
+  .footer__subscribe {
+    display: block;
+  }
+  .footer__btn {
+    margin-top: 20px;
+  }
+}
