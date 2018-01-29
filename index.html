@@ -79,7 +79,7 @@
     </div>
     <div class="header__block header__block--right">
       <a href="#" class="header__link">СОТРУДНИЧЕСТВО</a>
-      <a href="#" class="btn header__btn">ЗАПИСЬ НА ТРЕНИНГ</a>
+      <button type="button" class="btn header__btn btn-training">ЗАПИСЬ НА ТРЕНИНГ</button>
       <ul class="social-btns">
         <li class="social-btns__item">
           <a href="#" class="social-btns__link social-btns__link--yt"><span class="visually-hidden"></span></a>
@@ -98,7 +98,7 @@
       <div class="promo__block">
         <h1>МАКСИМ МАРУГИН</h1>
         <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa.</p>
-        <a href="#" class="btn-full promo__btn">ЗАПИСЬ НА ТРЕНИНГ</a>
+        <button type="button" class="btn-full promo__btn btn-training">ЗАПИСЬ НА ТРЕНИНГ</button>
       </div>
       <footer class="promo__footer">
         <p>© Copyright maxim marugin</p>
@@ -122,7 +122,7 @@
             <li><strong><span>97</span> млн. оборота в год</strong></li>
           </ul>
           <div class="who__btns">
-            <a href="#" class="btn-full who__btn-full">ЗАПИСЬ НА ТРЕНИНГ</a>
+            <button type="button" class="btn-full who__btn-full btn-training">ЗАПИСЬ НА ТРЕНИНГ</button>
             <a href="" class="btn who__btn">ПОДРОБНЕЕ ОБО МНЕ</a>
           </div>
         </div>
@@ -166,7 +166,7 @@
               <h4>Предназначение и Следование Божественному Расписанию</h4>
               <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry’s standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make.</p>
               <div class="popular__info">
-                <a href="#" class="btn-blue popular__btn">ПОДРОБНЕЕ</a>
+                <a href="#" class="btn-blue btn-arrow popular__btn">ПОДРОБНЕЕ</a>
                 <p class="popular__place">СВОБОДНЫХ МЕСТ <span>28</span></p>
               </div>
             </div>
@@ -183,7 +183,7 @@
               <h4>Предназначение и Следование Божественному Расписанию</h4>
               <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry’s standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make.</p>
               <div class="popular__info">
-                <a href="#" class="btn-blue popular__btn">ПОДРОБНЕЕ</a>
+                <a href="#" class="btn-blue btn-arrow popular__btn">ПОДРОБНЕЕ</a>
                 <p class="popular__place">СВОБОДНЫХ МЕСТ <span>28</span></p>
               </div>
             </div>
@@ -200,7 +200,7 @@
               <h4>Предназначение и Следование Божественному Расписанию</h4>
               <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry’s standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make.</p>
               <div class="popular__info">
-                <a href="#" class="btn-blue popular__btn">ПОДРОБНЕЕ</a>
+                <a href="#" class="btn-blue btn-arrow popular__btn">ПОДРОБНЕЕ</a>
                 <p class="popular__place">СВОБОДНЫХ МЕСТ <span>28</span></p>
               </div>
             </div>
@@ -440,9 +440,52 @@
     </div>
   </main>
   
+  <div style="display: none;">
+    <div class="modal" id="training">
+      <h2>ЗАПИСЬ НА ТРЕНИНГ</h2>
+      <form action="#" method="post" class="modal__form">
+        <input type="text" name="name" class="modal__input" placeholder="ВАШЕ ИМЯ">
+        <input type="email" name="email" class="modal__input" placeholder="ВАША ПОЧТА">
+        <div class="modal__wrap">
+          <input type="text" name="code" class="modal__phone modal__phone--code" placeholder="+7">
+          <input type="text" name="city" class="modal__phone modal__phone--city" placeholder="999">
+          <input type="text" name="phone" class="modal__phone modal__phone--phone" placeholder="999-99-99">
+        </div>
+        <button type="submit" class="btn-blue btn-arrow modal__btn">ОТПРАВИТЬ</button>
+        <input type="checkbox" name="policy" id="policy-modal" class="subscribe__check" checked>
+        <label for="policy-modal" class="subscribe__label">Нажимая на кнопку «ПОЛУЧАТЬ РАССЫЛКУ», я даю согласие на обработку персональных данных и соглашаюсь с <a href="#">политика конфиденциальности</a></label>
+        <input type="checkbox" name="advert" id="advert-modal" class="subscribe__check" checked>
+        <label for="advert-modal" class="subscribe__label">Я согласен на получение рекламной информации<br>от Максима Маругина</label>
+      </form>
+      <button type="button" class="modal__close arcticmodal-close"></button>
+    </div>
+  </div>
+  
   <script src="js/jquery-3.2.1.min.js"></script>
   <script src="js/jquery.appear.js"></script>
   <script src="js/jquery-circle-progress.js"></script>
   <script src="js/script.js"></script>
+  <script src="js/jquery.arcticmodal-0.3.min.js"></script>
+  <script>
+    $(".btn-training").click(function(){
+      $(function(){
+        $("#training").arcticmodal({
+          afterOpen: function(data, el) {
+            $('.promo').css('filter', 'blur(5px)');
+          },
+          afterClose: function(data, el) {
+            $('.promo').css('filter', 'blur(0)');
+          },
+          overlay: {
+            css: {
+              backgroundColor: 'rgba(255,255,255,0)',
+//              backgroundImage: 'linear-gradient(45deg, rgba(161,8,22,1) 0%, rgba(5,21,226,1) 100%)',
+              opacity: .3,
+            }
+          }
+        });
+      });
+    });
+  </script>
 </body>
 </html>
