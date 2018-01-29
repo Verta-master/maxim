@@ -93,3 +93,54 @@
   left: 50%;
   transform: translateX(-50%);
 }
+
+.promo__center {
+  width: 100%;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%,-50%);
+  text-align: center;
+  
+  span {
+    font-size: 72px;
+    font-weight: 700;
+    color: rgba(255,255,255,0.05);
+    text-shadow: 0px 5px 16.92px rgba(0, 0, 0, 0.1);
+  }
+  
+  h1 {
+    margin-top: 30px;
+    margin-bottom: 35px;
+    font-size: 14px;
+    font-weight: 700;
+    line-height: 1;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+  }
+}
+
+.promo__arrow {
+  width: 291px;
+  height: 51px;
+  padding-right: 30px;
+  margin-left: auto;
+  margin-right: auto;
+  position: relative;
+  border-radius: 40px;
+  font-size: 12px;
+  color: #1a5fdb;
+  
+  &::after {
+    content: "";
+    position: absolute;
+    top: 50%;
+    right: 30px;
+    transform: translateY(-50%);
+    width: 16px;
+    height: 16px;
+    background-image: url(../img/ic_arrow_blue.svg);
+    background-size: contain;
+    background-repeat: no-repeat;
+  }
+}
