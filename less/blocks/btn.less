@@ -56,11 +56,12 @@
   border-radius: 40px;
   background-color: rgb(39,116,254);
   background-image: linear-gradient(to top, rgb(39,116,254) 0%, rgb(26,95,218) 100%);
+  background-size: 100% 100%;
   transition: ease-out 0.3s;
   
   &:hover,
   &:active {
-    opacity: 0.8;
+    background-size: 100% 200%;
     transition: ease-out 0.3s;
   }
 }
@@ -81,7 +82,8 @@
   
   &:hover,
   &:active {
-    opacity: 0.8;
+    background-color: #bababa;
+    color: #fff;
     transition: ease-out 0.3s;
   }
 }
