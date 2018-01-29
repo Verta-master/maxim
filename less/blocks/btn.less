@@ -8,6 +8,7 @@
   display: flex;
   justify-content: center;
   align-items: center;
+  outline: none;
   border-radius: 20px;
   border: 2px solid rgba(255, 255, 255, 0.3);
   transition: ease-out 0.3s;
@@ -31,6 +32,7 @@
   display: flex;
   justify-content: center;
   align-items: center;
+  outline: none;
   border-radius: 20px;
   background-color: #fff;
   transition: ease-out 0.3s;
@@ -54,6 +56,7 @@
   letter-spacing: 1px;
   align-items: center;
   border-radius: 40px;
+  outline: none;
   background-color: rgb(39,116,254);
   background-image: linear-gradient(to top, rgb(39,116,254) 0%, rgb(26,95,218) 100%);
   background-size: 100% 100%;
@@ -77,6 +80,7 @@
   letter-spacing: 1px;
   align-items: center;
   border-radius: 20px;
+  outline: none;
   background-color: rgb(245, 245, 245);
   transition: ease-out 0.3s;
   
@@ -85,5 +89,24 @@
     background-color: #bababa;
     color: #fff;
     transition: ease-out 0.3s;
+  }
+}
+
+.btn-arrow {
+  padding-right: 30px;
+  position: relative; 
+  box-shadow: 0px 5px 16.92px 1.08px rgba(0, 0, 0, 0.19);
+  
+  &::after {
+    content: "";
+    position: absolute;
+    top: 50%;
+    right: 30px;
+    transform: translateY(-50%);
+    width: 16px;
+    height: 16px;
+    background-image: url(../img/ic_arrow_forward_white_24px.svg);
+    background-size: contain;
+    background-repeat: no-repeat;
   }
 }
