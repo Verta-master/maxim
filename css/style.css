@@ -400,6 +400,7 @@ body {
   line-height: 18px;
   font-weight: 400;
   color: #fff;
+  overflow-x: hidden;
 }
 img {
   max-width: 100%;
