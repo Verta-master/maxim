@@ -471,10 +471,16 @@
       $(function(){
         $("#training").arcticmodal({
           afterOpen: function(data, el) {
+            $('body').css('overflow-y', 'hidden');
+            $('.promo').css('transform', 'scale(1.02)');
+            $('.promo').css('transition', '0.05s');
             $('.promo').css('filter', 'blur(5px)');
           },
           afterClose: function(data, el) {
             $('.promo').css('filter', 'blur(0)');
+            $('.promo').css('transform', 'scale(1)');
+            $('.promo').css('transition', '0.05s');
+            $('body').css('overflow-y', 'scroll');
           },
           overlay: {
             css: {
