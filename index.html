@@ -440,6 +440,7 @@
     </div>
   </main>
   
+<!-- Modal windows -->
   <div style="display: none;">
     <div class="modal" id="training">
       <h2>ЗАПИСЬ НА ТРЕНИНГ</h2>
@@ -483,6 +484,56 @@
     </div>
   </div>
   
+  <div style="display: none;">
+    <div class="modal" id="ticket">
+      <figure class="modal__img">
+        <img src="img/modal-img.jpg" alt="" width="1920" height="275">
+      </figure>
+      <div class="modal__block">
+        <h2>Предназначение и Следование Божественному Расписанию</h2>
+        <div class="modal__text">
+          <time datetime="20.02.2018">20 февраля 2018</time>
+          <span>СТОИМОСТЬ</span>
+          <p class="modal__location">НОВОРОССИЙСК</p>
+          <p class="modal__price">ОТ <span>25.000</span></p>
+        </div>
+      </div>
+      <div class="modal__main">
+        <h3>БИЛЕТЫ</h3>
+        <ul class="modal__list">
+          <li class="modal__item">
+            <div class="modal__left">
+              <p class="modal__title">ИНТЕНСИВ*</p>
+              <p class="modal_comment">5 КУРСОВ ТОТАЛЬНОЕ ПОГРУЖЕНИЕ</p>
+            </div>
+            <div class="modal__right">
+              <p class="modal__price">ОТ <span>72.000</span></p>
+              <p class="modal_comment">СТОИМОСТЬ</p>
+            </div>
+          </li>
+          <li class="modal__item">
+            <div class="modal__left">
+              <p class="modal__title">1 любой курс</p>
+              <p class="modal_comment">УЧАСТИЕ В ОПРЕДЕЛЕННОМ КУРСЕ</p>
+            </div>
+            <div class="modal__right">
+              <p class="modal__price"><span>18.000</span></p>
+              <p class="modal_comment">СТОИМОСТЬ</p>
+            </div>
+          </li>
+        </ul>
+        <p><span>*-Акция:</span> При участии во всех тренингах стипендия 20%</p>
+        <p class="modal__note">Важно знать:</p>
+        <ul class="modal__ordinary">
+          <li>Отличное место чтобы насладиться морем, пляжем, фруктами</li>
+          <li>Набраться сил и получить массу новых эмоий и впечатлений</li>
+          <li>Отличное место чтобы насладиться морем, пляжем, фруктами</li>
+        </ul>
+      </div>
+      <button type="button" class="modal__close arcticmodal-close"></button>
+    </div>
+  </div>
+  
   <script src="js/jquery-3.2.1.min.js"></script>
   <script src="js/jquery.appear.js"></script>
   <script src="js/jquery-circle-progress.js"></script>
@@ -514,6 +565,26 @@
     $(".btn-call").click(function(){
       $(function(){
         $("#call").arcticmodal({
+          beforeOpen: function(data, el) {
+            $('body').css('overflow-y', 'hidden');
+            $('.promo').addClass('blur');
+          },
+          afterClose: function(data, el) {
+            $('.promo').removeClass('blur');
+            $('body').css('overflow-y', 'scroll');
+          },
+          overlay: {
+            css: {
+              backgroundColor: 'rgba(255,255,255,0)',
+              opacity: .3,
+            }
+          }
+        });
+      });
+    });
+    $(".btn-ticket").click(function(){
+      $(function(){
+        $("#ticket").arcticmodal({
           beforeOpen: function(data, el) {
             $('body').css('overflow-y', 'hidden');
             $('.promo').addClass('blur');
