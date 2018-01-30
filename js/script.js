@@ -3,6 +3,8 @@ $('.menu__btn').click(function() {
   $(this).next().slideToggle();
   $('.menu').toggleClass('menu--closed');
   $('.menu').toggleClass('menu--opened');
+  $('.promo').toggleClass('blur');
+  $('.main-bg').toggleClass('blur');
 });
 $('.menu__item').hover(
   function() {
