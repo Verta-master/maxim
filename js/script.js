@@ -25,11 +25,13 @@ function onScroll(event){
   var scrollPos = $(document).scrollTop() + 150;
   var decoHeight = parseInt($('body').css('height'), 10);
   if (scrollPos > 150) {
-//    $('.header__bottom').addClass('header__bottom--shadow');
+    $('.header').addClass('bg');
+    $('.footer-main').addClass('bg');
     $('.footer-main__scroll').hide();
     $('.footer-main__deco').css('height',  decoHeight / 100 - scrollPos/10, 10);
   } else {
-//    $('.header__bottom').removeClass('header__bottom--shadow');
+    $('.header').removeClass('bg');
+    $('.footer-main').removeClass('bg');
     $('.footer-main__scroll').show();
   }
   if (scrollPos > decoHeight - scrollPos/5) {

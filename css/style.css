@@ -716,6 +716,9 @@ h3 {
   padding-left: 25px;
   padding-right: 25px;
   border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  background-color: rgba(255, 255, 255, 0);
+  -webkit-transition: background-color ease-out 0.3s;
+  transition: background-color ease-out 0.3s;
   z-index: 9999;
 }
 .header__block {
@@ -1462,6 +1465,8 @@ h3 {
   background-image: url(../img/ic_arrow_forward_white_24px.svg);
   background-size: contain;
   background-repeat: no-repeat;
+  -webkit-transition: ease-out 0.3s;
+  transition: ease-out 0.3s;
 }
 .nav-link:hover,
 .nav-link:active {
@@ -1470,12 +1475,9 @@ h3 {
   transition: ease-out 0.3s;
 }
 .nav-link:hover::after {
-  -webkit-animation-name: slideOutRight;
-          animation-name: slideOutRight;
-  -webkit-animation-duration: 1s;
-          animation-duration: 1s;
-  -webkit-animation-fill-mode: both;
-          animation-fill-mode: both;
+  right: -20px;
+  -webkit-transition: ease-out 0.3s;
+  transition: ease-out 0.3s;
 }
 .timetable {
   padding-top: 110px;
@@ -1991,6 +1993,9 @@ h3 {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  background-color: rgba(255, 255, 255, 0);
+  -webkit-transition: background-color ease-out 0.3s;
+  transition: background-color ease-out 0.3s;
   z-index: 2000;
 }
 .footer-main p {
@@ -2011,6 +2016,11 @@ h3 {
   color: rgba(255, 255, 255, 0.5);
   -webkit-transition: ease-out 0.3s;
   transition: ease-out 0.3s;
+}
+.bg {
+  background-color: rgba(255, 255, 255, 0.1);
+  -webkit-transition: background-color ease-out 0.3s;
+  transition: background-color ease-out 0.3s;
 }
 .footer-main__deco {
   position: absolute;
