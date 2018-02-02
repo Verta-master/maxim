@@ -79,7 +79,7 @@
       <a href="#" class="header__link location" title="Город">КРАСНОДАР</a>
     </div>
     <div class="header__block header__block--right">
-      <a href="cooperation.html" class="header__link">СОТРУДНИЧЕСТВО</a>
+      <a href="#" class="header__link">СОТРУДНИЧЕСТВО</a>
       <button type="button" class="btn header__btn btn-training">ЗАПИСЬ НА ТРЕНИНГ</button>
       <ul class="social-btns">
         <li class="social-btns__item">
@@ -95,34 +95,35 @@
   </header>
   
   <main class="main-bg">
-    <section class="promo promo--bg">
-      <h1>ТЕГИ</h1>
-      <ul class="promo__list promo__list--tag">
-        <li class="promo__item-tag">
-          <a href="#" class="promo__tag">БИЗНЕС</a>
-        </li>
-        <li class="promo__item-tag">
-          <a href="#" class="promo__tag">ТРЕНИНГИ</a>
-        </li>
-        <li class="promo__item-tag">
-          <a href="#" class="promo__tag">ВЫСТУПЛЕНИЯ</a>
-        </li>
-        <li class="promo__item-tag">
-          <a href="#" class="promo__tag">ЛИЧНЫЕ ЗАПИСИ</a>
-        </li>
-        <li class="promo__item-tag">
-          <a href="#" class="promo__tag">ОТ МАКСИМА МАРУГИНА</a>
-        </li>
-        <li class="promo__item-tag">
-          <a href="#" class="promo__tag">МОТИВАЦИЯ</a>
-        </li>
-        <li class="promo__item-tag">
-          <a href="#" class="promo__tag">БИЗНЕС ЛАНЧ</a>
-        </li>
-        <li class="promo__item-tag">
-          <a href="#" class="promo__tag">МОТИВАЦИЯ</a>
-        </li>
-      </ul>
+    <section class="promo promo--contacts wrapper">
+      <div class="social social--contacts">
+        <h1>СОТРУДНИЧЕСТВО</h1>
+        <div class="social__block">
+          <p>Приглашаем к сотрудничеству организаторов тренингов:<br>Сертификационных курсов по технологии Thetahealing:</p>
+          <ul class="social__contacts social__contacts--coop">
+            <li>Базовый</li>
+            <li>Продвинутый</li>
+            <li>Глубинные раскопки</li>
+            <li>Манифестация изобилия</li>
+          </ul>
+          <p>Авторских курсов:</p>
+          <ul class="social__contacts social__contacts--coop">
+            <li>Предназначение и божественное расписание</li>
+            <li>Раскрытие внутренней силы и творчества.</li>
+          </ul>
+          <p>Корпоративных тренингов:</p>
+          <ul class="social__contacts social__contacts--coop">
+            <li>Коммуникация внутри компании (от качества к росту прибыли).</li>
+            <li>Эмоциональное выгорание. (для топ-руководителей и владельцев бизнеса)</li>
+          </ul>
+          <p>Быть организатором - это важная задача и можно даже сказать миссия. Давать людям возможность измениться за счет результативных тренингов, и делать лучше этот мир. Быть организатором - это как быть предпринимателем, необходимо быть активным, общительным, знать как и уметь разрекламировать услугу, донести ценность до людей, мотивировать их к позитивным изменениям. Быть организатором - это и прибыльно, это новые знакомства, новые связи, высокий процент с продаж. Если вы такой или хотите им стать, пишите на почту <a href="mailto:mail@maxmarugin.ru">mail@maxmarugin.ru</a> мы вышлем всю необходимую информацию.</p>
+          <p class="social__bullet">Почта: <a href="mailto:mail@maxmarugin.ru">mail@maxmarugin.ru</a></p>
+          <div class="social__wrap">
+            <a href="#" class="btn social__btn">ЗАПОЛНЕНИЕ АНКЕТЫ</a>
+            <button type="button" class="btn social__btn btn-call">ЗАДАТЬ ВОПРОС</button>
+          </div>
+        </div>
+      </div>
     </section>
   </main>
   
@@ -152,6 +153,29 @@
       <button type="button" class="modal__close arcticmodal-close"></button>
     </div>
   </div>
+
+  <div style="display: none;">
+    <div class="modal" id="call">
+      <h2>ЗАДАТЬ ВОПРОС</h2>
+      <form action="#" method="post" class="modal__form">
+        <input type="text" name="name" class="modal__input" placeholder="ВАШЕ ИМЯ">
+        <input type="email" name="email" class="modal__input" placeholder="ВАША ПОЧТА">
+        <textarea name="text" class="modal__area" placeholder="КОММЕНТАРИЙ..."></textarea>
+        <div class="modal__wrap">
+          <input type="text" name="code" class="modal__phone modal__phone--code" placeholder="+7">
+          <input type="text" name="city" class="modal__phone modal__phone--city" placeholder="999">
+          <input type="text" name="phone" class="modal__phone modal__phone--phone" placeholder="999-99-99">
+        </div>
+        <button type="submit" class="btn-blue btn-arrow modal__btn">ОТПРАВИТЬ</button>
+        <input type="checkbox" name="policy" id="policy-call" class="subscribe__check" checked>
+        <label for="policy-call" class="subscribe__label">Нажимая на кнопку «ПОЛУЧАТЬ РАССЫЛКУ», я даю согласие на обработку персональных данных и соглашаюсь с <a href="#">политика конфиденциальности</a></label>
+        <input type="checkbox" name="advert" id="advert-call" class="subscribe__check" checked>
+        <label for="advert-call" class="subscribe__label">Я согласен на получение рекламной информации<br>от Максима Маругина</label>
+      </form>
+      <button type="button" class="modal__close arcticmodal-close"></button>
+    </div>
+  </div>
+
     
   <script src="js/jquery-3.2.1.min.js"></script>
   <script src="js/script.js"></script>
@@ -168,6 +192,26 @@
           afterClose: function(data, el) {
             $('.promo').removeClass('blur');
             $('.main-bg').removeClass('blur');
+            $('body').css('overflow-y', 'scroll');
+          },
+          overlay: {
+            css: {
+              backgroundColor: 'rgba(255,255,255,0)',
+              opacity: .3,
+            }
+          }
+        });
+      });
+    });
+    $(".btn-call").click(function(){
+      $(function(){
+        $("#call").arcticmodal({
+          beforeOpen: function(data, el) {
+            $('body').css('overflow-y', 'hidden');
+            $('.promo').addClass('blur');
+          },
+          afterClose: function(data, el) {
+            $('.promo').removeClass('blur');
             $('body').css('overflow-y', 'scroll');
           },
           overlay: {
