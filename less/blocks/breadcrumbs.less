@@ -54,6 +54,7 @@
     background-image: url(../img/ic_arrow_forward_white_24px.svg);
     background-size: contain;
     background-repeat: no-repeat;
+    transition: ease-out 0.3s;
   }
   
   &:hover,
@@ -63,8 +64,7 @@
   }
   
   &:hover::after {
-    animation-name: slideOutRight;
-    animation-duration: 1s;
-    animation-fill-mode: both;
+    right: -20px;
+    transition: ease-out 0.3s;
   }
 }
