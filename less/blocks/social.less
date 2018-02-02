@@ -71,6 +71,13 @@
     letter-spacing: 4px;
     margin-bottom: 17px;
   }
+  
+  &--contacts {
+    padding-top: 0;
+    padding-bottom: 0;
+    position: relative;
+    left: ~"calc(50% - 570px)";
+  }
 }
 
 .social__block {
@@ -87,6 +94,11 @@
 .social__btn {
   width: 213px;
   height: 40px;
+  
+  &--contacts {
+    width: 301px;
+    height: 36px;
+  }
 }
 
 .social__list {
@@ -147,5 +159,40 @@
     display: block;
     max-width: 100%;
     height: auto;
+  }
+}
+
+.social__contacts {
+  padding-left: 20px;
+  margin-top: 25px;
+  font-size: 12px;
+  font-weight: 700;
+  
+  li {
+    padding-left: 10px;
+    margin-bottom: 5px;
+    position: relative;
+    
+    &::before {
+      content: "";
+      position: absolute;
+      top: 6px;
+      left: 0;
+      width: 4px;
+      height: 4px;
+      border-radius: 50%;
+      background-color: #fff;
+    }
+  }
+  
+  a {
+    color: #fff;
+    transition: ease-out 0.3s;
+    
+    &:hover,
+    &:active {
+      color: @blue;
+      transition: ease-out 0.3s;
+    }
   }
 }

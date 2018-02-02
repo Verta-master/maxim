@@ -61,14 +61,12 @@ function onWindowChange() {
     console.log(window.innerWidth);
     $('.title__list').hide();
     $('.title__plate').hide();
-//    $('.title__list').removeClass('title__btn-active');
-//    $('.title__plate').addClass('title__btn-active');
+    $('.footer-main').hide();
     $('.timetable__list').addClass('timetable__list--plate');
   } else {
     $('.title__list').show();
     $('.title__plate').show();
-//    $('.title__list').addClass('title__btn-active');
-//    $('.title__plate').removeClass('title__btn-active');
+    $('.footer-main').show();
     $('.timetable__list').removeClass('timetable__list--plate');
   }
 }
