@@ -33,13 +33,16 @@
   }
   
   &--bg {
-    padding-top: 100px;
+    padding-top: 95px;
     background-image: none;
     
     h1 {
+      margin-bottom: 0;
       font-size: 24px;
+      font-weight: 700;
       letter-spacing: 0.1em;
       text-align: center;
+      text-shadow: 0px 5px 16.92px rgba(0, 0, 0, 0.1);
     }
   }
 }
@@ -109,16 +112,19 @@
 }
 
 .promo__list {
-  max-width: 1030px;
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
   align-items: center;
   align-content: flex-start;
+  
+  &--tag {
+    max-width: 1060px;
+  }
 }
 
 .promo__item {
-  margin-bottom: 15px;
+  margin-bottom: 20px;
 }
 
 .promo__category {
@@ -126,6 +132,7 @@
   margin-right: 30px;
   font-size: 12px;
   font-weight: 700;
+  letter-spacing: 0.2em;
   text-transform: uppercase;
   color: rgba(255,255,255,0.3);
   transition: ease-out 0.3s;
@@ -139,4 +146,34 @@
     color: #fff;
     transition: ease-out 0.3s;
   }
+}
+
+.promo__tag {
+  min-height: 36px;
+  padding: 10px 16px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  border-radius: 20px;
+  border: 2px solid rgba(255, 255, 255, 0.3);
+  color: rgba(255,255,255,0.5);
+  transition: ease-out 0.3s;
+  
+  &:hover,
+  &:active {
+    color: @blue;
+    border: 2px solid #fff;
+    background-color: #fff;
+    transition: ease-out 0.3s;
+  }
+}
+
+.promo__item-tag {
+  margin-left: 16px;
+  margin-right: 16px;
+  margin-bottom: 15px;
 }
