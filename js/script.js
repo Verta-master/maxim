@@ -54,6 +54,30 @@ btnList.addEventListener("click", function() {
   btnPlate.classList.remove('title__btn-active');
 });
 
+function onWindowChange() {
+  if (window.innerWidth < 1022) {
+    console.log(window.innerWidth);
+    $('.title__list').hide();
+    $('.title__plate').hide();
+//    $('.title__list').removeClass('title__btn-active');
+//    $('.title__plate').addClass('title__btn-active');
+    $('.timetable__list').addClass('timetable__list--plate');
+  } else {
+    $('.title__list').show();
+    $('.title__plate').show();
+//    $('.title__list').addClass('title__btn-active');
+//    $('.title__plate').removeClass('title__btn-active');
+    $('.timetable__list').removeClass('timetable__list--plate');
+  }
+}
+
+$(window).resize(function(){
+	onWindowChange();
+});
+$(document).ready(function(){
+	onWindowChange();
+});
+
 //Circles
 var circles = $('.value__circle');
 

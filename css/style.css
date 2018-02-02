@@ -912,6 +912,16 @@ h3 {
   background-image: url(../img/icon-list.png);
   background-repeat: no-repeat;
   opacity: 0.3;
+  position: relative;
+}
+.title__list::after {
+  content: "/";
+  position: absolute;
+  top: -2px;
+  right: -23px;
+  color: #fff;
+  font-size: 18px;
+  font-weight: 400;
 }
 .title__list:hover,
 .title__list:active {
@@ -933,18 +943,6 @@ h3 {
 }
 .title__btn-active {
   opacity: 1;
-}
-.title__btns {
-  position: relative;
-}
-.title__btns::after {
-  content: "/";
-  position: absolute;
-  top: 3px;
-  left: 32%;
-  color: #fff;
-  font-size: 18px;
-  font-weight: 400;
 }
 .menu {
   color: #fff;
