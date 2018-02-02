@@ -1229,6 +1229,17 @@ h3 {
 .social__block p {
   margin-top: 0;
 }
+.social__block a {
+  color: #fff;
+  -webkit-transition: ease-out 0.3s;
+  transition: ease-out 0.3s;
+}
+.social__block a:hover,
+.social__block a:active {
+  color: #1a5fdb;
+  -webkit-transition: ease-out 0.3s;
+  transition: ease-out 0.3s;
+}
 .social__btn {
   width: 213px;
   height: 40px;
@@ -1313,6 +1324,10 @@ h3 {
   font-size: 12px;
   font-weight: 700;
 }
+.social__contacts--coop {
+  margin-top: 0;
+  margin-bottom: 35px;
+}
 .social__contacts li {
   padding-left: 10px;
   margin-bottom: 5px;
@@ -1338,6 +1353,51 @@ h3 {
   color: #1a5fdb;
   -webkit-transition: ease-out 0.3s;
   transition: ease-out 0.3s;
+}
+.social__bullet {
+  padding-left: 30px;
+  margin-bottom: 5px;
+  position: relative;
+}
+.social__bullet::before {
+  content: "";
+  position: absolute;
+  top: 6px;
+  left: 20px;
+  width: 4px;
+  height: 4px;
+  border-radius: 50%;
+  background-color: #fff;
+}
+.social__wrap {
+  margin-top: 30px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+.social__wrap .btn:first-child {
+  width: 194px;
+  height: 36px;
+  margin-right: 10px;
+  color: rgba(255, 255, 255, 0.5);
+  -webkit-transition: ease-out 0.3s;
+  transition: ease-out 0.3s;
+}
+.social__wrap .btn:first-child:hover,
+.social__wrap .btn:first-child:active {
+  color: #1a5fdb;
+  -webkit-transition: ease-out 0.3s;
+  transition: ease-out 0.3s;
+}
+.social__wrap .btn:nth-child(2) {
+  width: 153px;
+  height: 36px;
 }
 .who {
   padding-top: 135px;

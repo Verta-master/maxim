@@ -79,7 +79,7 @@
       <a href="#" class="header__link location" title="Город">КРАСНОДАР</a>
     </div>
     <div class="header__block header__block--right">
-      <a href="#" class="header__link">СОТРУДНИЧЕСТВО</a>
+      <a href="cooperation.html" class="header__link">СОТРУДНИЧЕСТВО</a>
       <button type="button" class="btn header__btn btn-training">ЗАПИСЬ НА ТРЕНИНГ</button>
       <ul class="social-btns">
         <li class="social-btns__item">
@@ -131,7 +131,7 @@
               </a>
             </li>
           </ul>
-          <a href="#" class="btn social__btn social__btn--contacts">ЗАДАТЬ ВОПРОС / ОБРАТНАЯ СВЯЗЬ</a>
+          <button type="button" class="btn social__btn social__btn--contacts btn-call">ЗАДАТЬ ВОПРОС / ОБРАТНАЯ СВЯЗЬ</button>
         </div>
       </div>
     </section>
@@ -163,6 +163,29 @@
       <button type="button" class="modal__close arcticmodal-close"></button>
     </div>
   </div>
+
+  <div style="display: none;">
+    <div class="modal" id="call">
+      <h2>ЗАДАТЬ ВОПРОС</h2>
+      <form action="#" method="post" class="modal__form">
+        <input type="text" name="name" class="modal__input" placeholder="ВАШЕ ИМЯ">
+        <input type="email" name="email" class="modal__input" placeholder="ВАША ПОЧТА">
+        <textarea name="text" class="modal__area" placeholder="КОММЕНТАРИЙ..."></textarea>
+        <div class="modal__wrap">
+          <input type="text" name="code" class="modal__phone modal__phone--code" placeholder="+7">
+          <input type="text" name="city" class="modal__phone modal__phone--city" placeholder="999">
+          <input type="text" name="phone" class="modal__phone modal__phone--phone" placeholder="999-99-99">
+        </div>
+        <button type="submit" class="btn-blue btn-arrow modal__btn">ОТПРАВИТЬ</button>
+        <input type="checkbox" name="policy" id="policy-call" class="subscribe__check" checked>
+        <label for="policy-call" class="subscribe__label">Нажимая на кнопку «ПОЛУЧАТЬ РАССЫЛКУ», я даю согласие на обработку персональных данных и соглашаюсь с <a href="#">политика конфиденциальности</a></label>
+        <input type="checkbox" name="advert" id="advert-call" class="subscribe__check" checked>
+        <label for="advert-call" class="subscribe__label">Я согласен на получение рекламной информации<br>от Максима Маругина</label>
+      </form>
+      <button type="button" class="modal__close arcticmodal-close"></button>
+    </div>
+  </div>
+
     
   <script src="js/jquery-3.2.1.min.js"></script>
   <script src="js/script.js"></script>
@@ -179,6 +202,26 @@
           afterClose: function(data, el) {
             $('.promo').removeClass('blur');
             $('.main-bg').removeClass('blur');
+            $('body').css('overflow-y', 'scroll');
+          },
+          overlay: {
+            css: {
+              backgroundColor: 'rgba(255,255,255,0)',
+              opacity: .3,
+            }
+          }
+        });
+      });
+    });
+    $(".btn-call").click(function(){
+      $(function(){
+        $("#call").arcticmodal({
+          beforeOpen: function(data, el) {
+            $('body').css('overflow-y', 'hidden');
+            $('.promo').addClass('blur');
+          },
+          afterClose: function(data, el) {
+            $('.promo').removeClass('blur');
             $('body').css('overflow-y', 'scroll');
           },
           overlay: {
