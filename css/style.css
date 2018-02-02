@@ -830,6 +830,27 @@ h3 {
   text-align: center;
   text-shadow: 0px 5px 16.92px rgba(0, 0, 0, 0.1);
 }
+.promo--contacts {
+  min-height: 100vh;
+  height: auto;
+  background-image: url(../img/bg-flipped.jpg);
+  padding-top: 200px;
+  padding-bottom: 260px;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+}
+.promo--contacts h1 {
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  padding-left: 30px;
+}
+.promo--contacts p {
+  font-size: 12px;
+  line-height: 18px;
+  letter-spacing: 0.025em;
+  max-width: none;
+}
 .promo__block {
   width: 100%;
   padding-left: 50%;
@@ -982,6 +1003,7 @@ h3 {
   padding-left: 2px;
   padding-top: 6px;
   font-size: 12px;
+  color: #fff;
   text-transform: uppercase;
   letter-spacing: 5px;
 }
@@ -1192,6 +1214,12 @@ h3 {
   letter-spacing: 4px;
   margin-bottom: 17px;
 }
+.social--contacts {
+  padding-top: 0;
+  padding-bottom: 0;
+  position: relative;
+  left: calc(50% - 570px);
+}
 .social__block {
   width: 570px;
   padding: 47px 30px;
@@ -1204,6 +1232,10 @@ h3 {
 .social__btn {
   width: 213px;
   height: 40px;
+}
+.social__btn--contacts {
+  width: 301px;
+  height: 36px;
 }
 .social__list {
   margin-top: 35px;
@@ -1274,6 +1306,38 @@ h3 {
   display: block;
   max-width: 100%;
   height: auto;
+}
+.social__contacts {
+  padding-left: 20px;
+  margin-top: 25px;
+  font-size: 12px;
+  font-weight: 700;
+}
+.social__contacts li {
+  padding-left: 10px;
+  margin-bottom: 5px;
+  position: relative;
+}
+.social__contacts li::before {
+  content: "";
+  position: absolute;
+  top: 6px;
+  left: 0;
+  width: 4px;
+  height: 4px;
+  border-radius: 50%;
+  background-color: #fff;
+}
+.social__contacts a {
+  color: #fff;
+  -webkit-transition: ease-out 0.3s;
+  transition: ease-out 0.3s;
+}
+.social__contacts a:hover,
+.social__contacts a:active {
+  color: #1a5fdb;
+  -webkit-transition: ease-out 0.3s;
+  transition: ease-out 0.3s;
 }
 .who {
   padding-top: 135px;
