@@ -29,6 +29,24 @@
   }
 }
 
+.breadcrumbs__link--opacity {
+  opacity: 0.3;
+  transition: ease-out 0.3s;
+  
+  &:hover,
+  &:active {
+    opacity: 1;
+    text-decoration: none;
+    transition: ease-out 0.3s;
+  }
+  
+  &:hover::after,
+  &:last-child:hover,
+  &:last-child:active {
+    opacity: 0.3;
+  }
+}
+
 .nav-link {
   margin-right: 30px;
   padding-right: 30px;

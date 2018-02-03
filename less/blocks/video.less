@@ -1,0 +1,38 @@
+.video {
+  margin-bottom: 120px;
+  position: relative;
+}
+
+.video__img {
+  border-radius: 20px;
+  overflow: hidden;
+  
+  img {
+    display: block;
+  }
+}
+
+.video__play {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%,-50%);
+  width: 80px;
+  height: 80px;
+  padding-top: 5px;
+  border-radius: 50%;
+  background-color: rgb(255, 255, 255);
+  
+  svg {
+    fill: #000;
+    transition: ease-out 0.3s;
+  }
+  
+  &:hover,
+  &:active {
+    svg {
+      fill: @blue;
+      transition: ease-out 0.3s;
+    }
+  }
+}
