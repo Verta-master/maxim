@@ -1,0 +1,402 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta  name="viewport" content="width=device-width,initial-scale=1">
+  <title>Marugin Maxim</title>
+  <link rel="icon" type="image/png" href="img/logo.png">
+  <link rel="stylesheet" href="css/style.min.css">
+</head>
+<body>
+  <header class="header">
+    <div class="header__block">
+      <a href="index.html" class="logo">
+        <img src="img/logo.png" alt="Logo" width="42" height="39">
+        <p>Marugin Maxim</p>
+      </a>
+      <nav class="menu menu--closed">
+        <button type="button" class="menu__btn">НАВИГАЦИЯ</button>
+        <ul class="menu__list">
+          <li class="menu__item">
+            <a class="menu__link">ГЛАВНАЯ</a>
+          </li>
+          <li class="menu__item">
+            <a href="#" class="menu__link">КТО Я</a>
+          </li>
+          <li class="menu__item">
+            <a href="#" class="menu__link">ТРЕНИНГИ
+              <img src="img/ic_more_horiz_white_24px.svg" alt="ТРЕНИНГИ" width="24" height="24">
+            </a>
+            <ul class="menu__sublist">
+              <li class="menu__subitem">
+                <a href="#" class="menu__link">Манифестация и Изобилие</a>
+              </li>
+              <li class="menu__subitem">
+                <a href="#" class="menu__link">Раскрытие творческой силы</a>
+              </li>
+              <li class="menu__subitem">
+                <a href="training.html" class="menu__link">Предназначение и Следование Божественному Расписанию</a>
+              </li>
+            </ul>
+          </li>
+          <li class="menu__item">
+            <a href="blog.html" class="menu__link menu__link--active">БЛОГ
+              <img src="img/ic_more_horiz_white_24px.svg" alt="БЛОГ" width="24" height="24">
+            </a>
+            <ul class="menu__sublist">
+              <li class="menu__subitem">
+                <a href="#" class="menu__link">Пункт 1</a>
+              </li>
+              <li class="menu__subitem">
+                <a href="#" class="menu__link">Пункт 2</a>
+              </li>
+            </ul>
+          </li>
+          <li class="menu__item">
+            <a href="timetable.html" class="menu__link">РАСПИСАНИЕ</a>
+          </li>
+          <li class="menu__item">
+            <a href="collaboration.html" class="menu__link">СОТРУДНИЧЕСТВО</a>
+          </li>
+          <li class="menu__item">
+            <a href="#" class="menu__link">НОВОСТИ
+              <img src="img/ic_more_horiz_white_24px.svg" alt="НОВОСТИ" width="24" height="24">
+            </a>
+            <ul class="menu__sublist">
+              <li class="menu__subitem">
+                <a href="#" class="menu__link">Пункт 1</a>
+              </li>
+              <li class="menu__subitem">
+                <a href="#" class="menu__link">Пункт 2</a>
+              </li>
+            </ul>
+          </li>
+          <li class="menu__item">
+            <a href="contacts.html" class="menu__link">КОНТАКТЫ</a>
+          </li>
+        </ul>
+      </nav>
+      <a href="#" class="header__link location" title="Город">КРАСНОДАР</a>
+    </div>
+    <div class="header__block header__block--right">
+      <a href="#" class="header__link">СОТРУДНИЧЕСТВО</a>
+      <button type="button" class="btn header__btn btn-training">ЗАПИСЬ НА ТРЕНИНГ</button>
+      <ul class="social-btns">
+        <li class="social-btns__item">
+          <a href="#" class="social-btns__link social-btns__link--yt"><span class="visually-hidden"></span></a>
+        </li>
+        <li class="social-btns__item">
+          <a href="#" class="social-btns__link social-btns__link--vk"><span class="visually-hidden"></span></a>
+        </li>
+        <li class="social-btns__item">
+          <a href="#" class="social-btns__link social-btns__link--in"><span class="visually-hidden"></span></a>
+      </ul>
+    </div>
+  </header>
+  
+  <main class="main-bg">
+    <div class="wrapper">
+      <form action="#" method="get" class="filter">
+        <p>Показаны результаты 1-9 из 19</p>
+        <select name="category" id="category" class="filter__select">
+          <option value="">КАТЕГОРИИ</option>
+          <option value="1">БИЗНЕС</option>
+          <option value="2">ТРЕНИНГИ</option>
+          <option value="3">ПУТЕШЕСТВИЯ</option>
+          <option value="4">ОБРАЗ ЖИЗНИ</option>
+          <option value="5">ИНТЕРВЬЮ</option>
+          <option value="6">ВЫСТУПЛЕНИЯ</option>
+          <option value="7">ЛИЧНЫЕ</option>
+        </select>
+        <select name="tag" id="tag" class="filter__select">
+          <option value="">ТЕГИ</option>
+          <option value="1">БИЗНЕС</option>
+          <option value="2">ТРЕНИНГИ</option>
+          <option value="3">ВЫСТУПЛЕНИЯ</option>
+          <option value="4">ЛИЧНЫЕ ЗАПИСИ</option>
+          <option value="5">ОТ МАКСИМА МАРУГИНА</option>
+          <option value="6">МОТИВАЦИЯ</option>
+          <option value="7">БИЗНЕС ЛАНЧ</option>
+          <option value="8">МОТИВАЦИЯ</option>
+        </select>
+      </form>
+    </div>
+      
+    <section class="blog blog--internal wrapper">
+      <h1>БЛОГ</h1>
+      <ul class="blog__list">
+        <li class="blog__item">
+          <figure class="blog__img">
+            <img src="img/img-2.jpg" alt="" width="370" height="218">
+          </figure>
+          <div class="blog__text">
+            <h4>поступки на которые мы способны</h4>
+            <div class="blog__info">
+              <time datetime="2017-12-17" class="blog__date">17.12.2017</time>
+              <p class="blog__number">/ Просмотров: <span>346</span></p>
+            </div>
+            <p>Данные тренинг не является тренингом по ТетаХилинг Института THINK, однако в нём используются техники ТетаХилинг и...</p>
+            <p class="blog__author">Разместил: <span>Максим Маругин</span></p>
+            <a href="#" class="btn-grey blog__btn">ЧИТАТЬ ДАЛЕЕ</a>
+          </div>
+        </li>
+        <li class="blog__item">
+          <figure class="blog__img">
+            <img src="img/img-2.jpg" alt="" width="370" height="218">
+          </figure>
+          <div class="blog__text">
+            <h4>поступки на которые мы НЕТ) </h4>
+            <div class="blog__info">
+              <time datetime="2017-12-17" class="blog__date">17.12.2017</time>
+              <p class="blog__number">/ Просмотров: <span>346</span></p>
+            </div>
+            <p>Данные тренинг не является тренингом по ТетаХилинг Института THINK, однако в нём используются техники ТетаХилинг и...</p>
+            <p class="blog__author">Разместил: <span>Максим Маругин</span></p>
+            <a href="#" class="btn-grey blog__btn">ЧИТАТЬ ДАЛЕЕ</a>
+          </div>
+        </li>
+        <li class="blog__item">
+          <figure class="blog__img">
+            <img src="img/img-2.jpg" alt="" width="370" height="218">
+          </figure>
+          <div class="blog__text">
+            <h4>поступки на которые мы способны</h4>
+            <div class="blog__info">
+              <time datetime="2017-12-17" class="blog__date">17.12.2017</time>
+              <p class="blog__number">/ Просмотров: <span>346</span></p>
+            </div>
+            <p>Данные тренинг не является тренингом по ТетаХилинг Института THINK, однако в нём используются техники ТетаХилинг и...</p>
+            <p class="blog__author">Разместил: <span>Максим Маругин</span></p>
+            <a href="#" class="btn-grey blog__btn">ЧИТАТЬ ДАЛЕЕ</a>
+          </div>
+        </li>
+        <li class="blog__item">
+          <figure class="blog__img">
+            <img src="img/img-2.jpg" alt="" width="370" height="218">
+          </figure>
+          <div class="blog__text">
+            <h4>поступки на которые мы способны</h4>
+            <div class="blog__info">
+              <time datetime="2017-12-17" class="blog__date">17.12.2017</time>
+              <p class="blog__number">/ Просмотров: <span>346</span></p>
+            </div>
+            <p>Данные тренинг не является тренингом по ТетаХилинг Института THINK, однако в нём используются техники ТетаХилинг и...</p>
+            <p class="blog__author">Разместил: <span>Максим Маругин</span></p>
+            <a href="#" class="btn-grey blog__btn">ЧИТАТЬ ДАЛЕЕ</a>
+          </div>
+        </li>
+        <li class="blog__item">
+          <figure class="blog__img">
+            <img src="img/img-2.jpg" alt="" width="370" height="218">
+          </figure>
+          <div class="blog__text">
+            <h4>поступки на которые мы НЕТ) </h4>
+            <div class="blog__info">
+              <time datetime="2017-12-17" class="blog__date">17.12.2017</time>
+              <p class="blog__number">/ Просмотров: <span>346</span></p>
+            </div>
+            <p>Данные тренинг не является тренингом по ТетаХилинг Института THINK, однако в нём используются техники ТетаХилинг и...</p>
+            <p class="blog__author">Разместил: <span>Максим Маругин</span></p>
+            <a href="#" class="btn-grey blog__btn">ЧИТАТЬ ДАЛЕЕ</a>
+          </div>
+        </li>
+        <li class="blog__item">
+          <figure class="blog__img">
+            <img src="img/img-2.jpg" alt="" width="370" height="218">
+          </figure>
+          <div class="blog__text">
+            <h4>поступки на которые мы способны</h4>
+            <div class="blog__info">
+              <time datetime="2017-12-17" class="blog__date">17.12.2017</time>
+              <p class="blog__number">/ Просмотров: <span>346</span></p>
+            </div>
+            <p>Данные тренинг не является тренингом по ТетаХилинг Института THINK, однако в нём используются техники ТетаХилинг и...</p>
+            <p class="blog__author">Разместил: <span>Максим Маругин</span></p>
+            <a href="#" class="btn-grey blog__btn">ЧИТАТЬ ДАЛЕЕ</a>
+          </div>
+        </li>
+        <li class="blog__item">
+          <figure class="blog__img">
+            <img src="img/img-2.jpg" alt="" width="370" height="218">
+          </figure>
+          <div class="blog__text">
+            <h4>поступки на которые мы способны</h4>
+            <div class="blog__info">
+              <time datetime="2017-12-17" class="blog__date">17.12.2017</time>
+              <p class="blog__number">/ Просмотров: <span>346</span></p>
+            </div>
+            <p>Данные тренинг не является тренингом по ТетаХилинг Института THINK, однако в нём используются техники ТетаХилинг и...</p>
+            <p class="blog__author">Разместил: <span>Максим Маругин</span></p>
+            <a href="#" class="btn-grey blog__btn">ЧИТАТЬ ДАЛЕЕ</a>
+          </div>
+        </li>
+        <li class="blog__item">
+          <figure class="blog__img">
+            <img src="img/img-2.jpg" alt="" width="370" height="218">
+          </figure>
+          <div class="blog__text">
+            <h4>поступки на которые мы НЕТ) </h4>
+            <div class="blog__info">
+              <time datetime="2017-12-17" class="blog__date">17.12.2017</time>
+              <p class="blog__number">/ Просмотров: <span>346</span></p>
+            </div>
+            <p>Данные тренинг не является тренингом по ТетаХилинг Института THINK, однако в нём используются техники ТетаХилинг и...</p>
+            <p class="blog__author">Разместил: <span>Максим Маругин</span></p>
+            <a href="#" class="btn-grey blog__btn">ЧИТАТЬ ДАЛЕЕ</a>
+          </div>
+        </li>
+        <li class="blog__item">
+          <figure class="blog__img">
+            <img src="img/img-2.jpg" alt="" width="370" height="218">
+          </figure>
+          <div class="blog__text">
+            <h4>поступки на которые мы способны</h4>
+            <div class="blog__info">
+              <time datetime="2017-12-17" class="blog__date">17.12.2017</time>
+              <p class="blog__number">/ Просмотров: <span>346</span></p>
+            </div>
+            <p>Данные тренинг не является тренингом по ТетаХилинг Института THINK, однако в нём используются техники ТетаХилинг и...</p>
+            <p class="blog__author">Разместил: <span>Максим Маругин</span></p>
+            <a href="#" class="btn-grey blog__btn">ЧИТАТЬ ДАЛЕЕ</a>
+          </div>
+        </li>
+      </ul>
+    </section>
+
+    <nav class="pages pages--blog wrapper">
+      <a href="#" class="pages__link pages__link--prev pages__link--disabled">
+        <svg height="24" viewBox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg">
+          <path d="M18.41 16.59L13.82 12l4.59-4.59L17 6l-6 6 6 6zM6 6h2v12H6z"/>
+          <path d="M24 24H0V0h24v24z" fill="none"/>
+        </svg>
+      </a>
+      <div class="pages__numbers">
+        <a href="#" class="pages__link">1</a>
+        <a href="#" class="pages__link">2</a>
+        <a href="#" class="pages__link">3</a>
+        <a href="#" class="pages__link">4</a>
+      </div>
+      <a href="#" class="pages__link pages__link--next">
+        <svg height="24" viewBox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg">
+          <path d="M5.59 7.41L10.18 12l-4.59 4.59L7 18l6-6-6-6zM16 6h2v12h-2z"/>
+          <path d="M0 0h24v24H0V0z" fill="none"/>
+        </svg>
+      </a>
+    </nav>
+
+    <section class="couch couch--internal">
+      <div class="wrapper">
+        <h2>БЕСПЛАТНЫЙ КОУЧ</h2>
+        <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry’s standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type.</p>
+        <ul class="couch__list">
+          <li>&bull; Рассылка новостей</li>
+          <li>&bull; Медиа материалы</li>
+          <li>&bull; Оповещение о мероприятиях</li>
+        </ul>
+        <form action="#" method="post" class="subscribe">
+          <div class="subscribe__field">
+            <input type="email" name="email" class="subscribe__input" placeholder="ВВЕДИТЕ ВАШ EMAIL">
+            <button type="submit" class="btn-blue subscribe__btn">ПОЛУЧАТЬ РАССЫЛКУ</button>
+          </div>
+          <input type="checkbox" name="policy" id="policy" class="subscribe__check" checked>
+          <label for="policy" class="subscribe__label">Нажимая на кнопку «ПОЛУЧАТЬ РАССЫЛКУ», я даю согласие на обработку персональных данных и соглашаюсь с <a href="#">политика конфиденциальности</a></label>
+          <input type="checkbox" name="advert" id="advert" class="subscribe__check" checked>
+          <label for="advert" class="subscribe__label">Я согласен на получение рекламной информации<br>от Максима Маругина</label>
+        </form>
+      </div>
+    </section>
+    
+    <footer class="footer wrapper">
+      <div class="footer__top">
+        <div class="footer__logo">
+          <div class="logo">
+            <img src="img/logo.png" alt="Logo" width="42" height="39">
+            <p>Marugin Maxim</p>
+          </div>
+          <form action="#" method="post" class="footer__subscribe">
+            <input type="text" name="email" class="footer__input" placeholder="ВВЕДИТЕ ВАШ EMAIL">
+            <button type="submit" class="btn footer__btn">ПОДПИСАТЬСЯ НА НОВОСТИ</button>
+          </form>
+        </div>
+        <div class="footer__contacts">
+          <h3>КОНТАКТЫ</h3>
+          <p class="footer__address">Телефон: <a href="Tel:+79964098278">+7 (996) 409-82-78</a></p>
+          <p class="footer__address">Email: <a href="mailto:laylaydigital@gmail.com">laylaydigital@gmail.com</a></p>
+          <p class="footer__address">Адрес офиса: Новороссийск</p>
+        </div>
+        <div class="footer__social">
+          <h3>СОЦИАЛЬНЫЕ СЕТИ</h3>
+          <ul class="social-btns">
+            <li class="social-btns__item">
+              <a href="#" class="social-btns__link social-btns__link--yt"><span class="visually-hidden"></span></a>
+            </li>
+            <li class="social-btns__item">
+              <a href="#" class="social-btns__link social-btns__link--vk"><span class="visually-hidden"></span></a>
+            </li>
+            <li class="social-btns__item">
+              <a href="#" class="social-btns__link social-btns__link--in"><span class="visually-hidden"></span></a>
+            </li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer__bottom">
+        <p>Все права защищены. Копирайт Максим Маругин</p>
+        <a href="http://laylaydigital.ru/" class="footer__laylay"><img src="img/logo-laylay.png" alt="Lay Lay" width="107" height="42"></a>
+      </div>
+    </footer>
+  </main>
+  
+  <footer class="footer-main">
+    <p>© Copyright maxim marugin</p>
+    <p>Designed by <a href="http://laylaydigital.ru/">Lay Lay</a></p>
+  </footer>
+
+<!-- Modal windows -->
+  <div style="display: none;">
+    <div class="modal" id="training">
+      <h2>ЗАПИСЬ НА ТРЕНИНГ</h2>
+      <form action="#" method="post" class="modal__form">
+        <input type="text" name="name" class="modal__input" placeholder="ВАШЕ ИМЯ">
+        <input type="email" name="email" class="modal__input" placeholder="ВАША ПОЧТА">
+        <div class="modal__wrap">
+          <input type="text" name="code" class="modal__phone modal__phone--code" placeholder="+7">
+          <input type="text" name="city" class="modal__phone modal__phone--city" placeholder="999">
+          <input type="text" name="phone" class="modal__phone modal__phone--phone" placeholder="999-99-99">
+        </div>
+        <button type="submit" class="btn-blue btn-arrow modal__btn">ОТПРАВИТЬ</button>
+        <input type="checkbox" name="policy" id="policy-modal" class="subscribe__check" checked>
+        <label for="policy-modal" class="subscribe__label">Нажимая на кнопку «ПОЛУЧАТЬ РАССЫЛКУ», я даю согласие на обработку персональных данных и соглашаюсь с <a href="#">политика конфиденциальности</a></label>
+        <input type="checkbox" name="advert" id="advert-modal" class="subscribe__check" checked>
+        <label for="advert-modal" class="subscribe__label">Я согласен на получение рекламной информации<br>от Максима Маругина</label>
+      </form>
+      <button type="button" class="modal__close arcticmodal-close"></button>
+    </div>
+  </div>
+
+  <script src="js/jquery-3.2.1.min.js"></script>
+  <script src="js/script.js"></script>
+  <script src="js/jquery.arcticmodal-0.3.min.js"></script>
+  <script>
+    $(".btn-training").click(function(){
+      $(function(){
+        $("#training").arcticmodal({
+          beforeOpen: function(data, el) {
+            $('body').css('overflow-y', 'hidden');
+            $('.main-bg').addClass('blur');
+          },
+          afterClose: function(data, el) {
+            $('.main-bg').removeClass('blur');
+            $('body').css('overflow-y', 'scroll');
+          },
+          overlay: {
+            css: {
+              backgroundColor: 'rgba(255,255,255,0)',
+              opacity: .3,
+            }
+          }
+        });
+      });
+    });
+  </script>
+</body>
+</html>
