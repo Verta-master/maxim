@@ -1,5 +1,21 @@
 .blog {
   padding-top: 155px;
+  
+  &--internal {
+    padding-top: 105px;
+    
+    .blog__item {
+      margin-bottom: 32px;
+    }
+  }
+  
+  h1 {
+    margin-bottom: 30px;
+    font-size: 24px;
+    font-weight: 700;
+    letter-spacing: 0.1em;
+    padding-left: 30px;
+  }
 }
 
 .blog__list {
@@ -8,11 +24,11 @@
   justify-content: flex-start;
   align-items: stretch;
   align-content: flex-start;
-  margin-bottom: 25px;
 }
 
 .blog__item {
   width: 370px;
+  margin-bottom: 25px;
   margin-right: 30px;
   display: flex;
   flex-direction: column;

@@ -1,0 +1,52 @@
+.filter {
+  float: right;
+  margin-top: 115px;
+  padding-right: 25px;
+  
+  p {
+    margin: 0;
+    display: inline-block;
+    color: rgba(255,255,255,0.5);
+    font-size: 10px;
+    text-transform: uppercase;
+    letter-spacing: 0.2em;
+  }
+}
+
+.filter__select {
+  margin-left: 50px;
+  background-color: rgba(255,255,255,0);
+  color: rgba(255,255,255,0.5);
+  font-size: 10px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.2em;
+  line-height: 36px;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  appearance: none;
+  background-image: url(../img/ic_keyboard_arrow_down.svg);
+  background-repeat: no-repeat;
+  background-position: right center;
+  background-size: 16px 16px;
+  
+  &:hover,
+  &:active {
+    color: @blue;
+  }
+}
+
+.filter__select::-ms-expand {
+  color: transparent;
+  border: none;
+  background-color: transparent;
+}
+
+#category {
+  width: 105px;
+}
+
+#tag {
+  width: 80px;
+}
