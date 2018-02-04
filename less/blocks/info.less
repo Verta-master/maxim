@@ -76,6 +76,7 @@
 
 .info__wrap {
   display: flex;
+  flex-wrap: wrap;
   justify-content: flex-start;
   align-items: baseline;
 
@@ -96,6 +97,10 @@
       position: absolute;
       bottom: 0;
       right: -10px;
+    }
+    
+    &:last-child::after {
+      display: none;
     }
   }
 }
