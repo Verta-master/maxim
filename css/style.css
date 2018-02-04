@@ -2515,6 +2515,8 @@ h3 {
   width: auto;
 }
 .modal--video iframe {
+  width: 1120px;
+  height: 630px;
   display: block;
   border: none;
   border-radius: 20px;
@@ -2975,7 +2977,7 @@ h3 {
 }
 .training {
   width: 100%;
-  height: 100vh;
+  min-height: 100vh;
   padding-top: 117px;
   background-image: linear-gradient(45deg, rgba(161, 8, 22, 0.3), rgba(5, 21, 226, 0.3)), linear-gradient(to top, #000, rgba(0, 0, 0, 0)), linear-gradient(to top, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(../img/bg-training.jpg);
   background-repeat: no-repeat;
@@ -3019,6 +3021,8 @@ h3 {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
   -webkit-box-pack: start;
       -ms-flex-pack: start;
           justify-content: flex-start;
@@ -3109,6 +3113,7 @@ h3 {
   margin-top: 75px;
 }
 .about__pay {
+  display: block;
   width: 370px;
   min-height: 110px;
   padding: 18px 30px;
@@ -3174,7 +3179,7 @@ h3 {
 }
 .filter {
   float: right;
-  margin-top: 115px;
+  margin-top: -50px;
   padding-right: 25px;
 }
 .filter p {
@@ -3291,6 +3296,8 @@ h3 {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
   -webkit-box-pack: start;
       -ms-flex-pack: start;
           justify-content: flex-start;
@@ -3314,6 +3321,9 @@ h3 {
   position: absolute;
   bottom: 0;
   right: -10px;
+}
+.info__wrap .info__date:last-child::after {
+  display: none;
 }
 .info__list {
   color: #7e7e7e;
@@ -3373,7 +3383,13 @@ h3 {
 .sidebar__link span {
   color: rgba(203, 203, 203, 0.8);
 }
+@media (max-width: 1400px) {
+  .about {
+    margin-top: 100px;
+  }
+}
 @media (max-width: 1229px) {
+  .wrapper-narrow,
   .wrapper {
     width: 100%;
   }
@@ -3433,6 +3449,29 @@ h3 {
   .footer__btn {
     margin-top: 20px;
   }
+  .social--contacts {
+    left: 0;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  .modal--video {
+    width: 70vw;
+  }
+  .modal--video iframe {
+    width: 100%;
+    height: 400px;
+  }
+  .sidebar {
+    position: static;
+    padding-top: 115px;
+    margin-top: 0;
+  }
+  .sidebar__list {
+    border-radius: 20px;
+  }
+  .info {
+    padding-top: 50px;
+  }
 }
 @media (max-width: 1022px) {
   .menu__btn {
@@ -3485,6 +3524,34 @@ h3 {
     margin-right: 0;
     margin-bottom: 40px;
   }
+  .about {
+    width: calc(100% - 30px);
+    padding: 30px;
+    margin-left: 15px;
+    margin-right: 15px;
+  }
+  .about__pay {
+    width: 45%;
+  }
+  .filter {
+    margin-top: 0;
+    margin-bottom: 15px;
+    float: none;
+    padding-left: 30px;
+  }
+  .filter p {
+    margin-right: 50px;
+  }
+  .filter__select {
+    margin-left: 0;
+    margin-right: 50px;
+  }
+  .blog h1 {
+    margin-bottom: 15px;
+  }
+  .info {
+    width: 100%;
+  }
 }
 @media (max-width: 766px) {
   .promo {
@@ -3494,6 +3561,15 @@ h3 {
   }
   .promo h1 {
     line-height: 1.2;
+  }
+  .promo--bg {
+    padding-top: 95px;
+  }
+  .promo__list {
+    margin-top: 30px;
+  }
+  .promo--contacts {
+    padding-top: 150px;
   }
   .wrapper {
     padding-left: 15px;
@@ -3559,7 +3635,9 @@ h3 {
     padding-left: 0;
   }
   .timetable__list--plate .timetable__price {
-    position: static;
+    position: relative;
+    bottom: 0;
+    left: 0;
   }
   .timetable__list--plate .timetable__btns {
     margin-bottom: 0;
@@ -3619,5 +3697,39 @@ h3 {
     -webkit-box-pack: start;
         -ms-flex-pack: start;
             justify-content: flex-start;
+  }
+}
+@media (max-width: 481px) {
+  .social__btn--contacts {
+    width: 100%;
+    height: auto;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+  }
+  .training h1,
+  .promo--contacts h1 {
+    font-size: 20px;
+    line-height: 1.5;
+  }
+  .social__btn {
+    margin-bottom: 20px;
+  }
+  .training__list {
+    padding-bottom: 20px;
+    display: block;
+  }
+  .about h2 {
+    padding: 0;
+    font-size: 20px;
+  }
+  .about__wrap {
+    display: block;
+  }
+  .about__pay {
+    width: 100%;
+    margin-bottom: 20px;
+  }
+  .modal--video iframe {
+    height: 180px;
   }
 }
