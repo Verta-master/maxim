@@ -1,0 +1,43 @@
+.sidebar {
+  width: 300px;
+  margin-top: 155px;
+  position: fixed;
+  top: 0;
+  left: ~"calc(50% + 285px)";
+  
+  h2 {
+    margin-bottom: 30px;
+    font-size: 10px;
+    font-weight: 700;
+    text-transform: uppercase;
+    color: rgba(255, 255, 255, 0.2);
+    letter-spacing: 0.2em;
+  }
+}
+
+.sidebar__list {
+  padding: 0 30px;
+  border-radius: 0 20px 20px 0;
+  background-color: rgba(255, 255, 255, 0.1);
+}
+
+.sidebar__item {
+  padding-top: 26px;
+  padding-bottom: 27px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.15);
+  
+  &:last-child {
+    border-bottom: none;
+  }
+}
+
+.sidebar__link {
+  font-size: 12px;
+  line-height: 19px;
+  color: rgba(255, 255, 255, 0.8);
+  letter-spacing: 0.1em;
+  
+  span {
+    color: rgba(203, 203, 203, 0.8);
+  }
+}
