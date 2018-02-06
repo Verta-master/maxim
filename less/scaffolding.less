@@ -83,6 +83,42 @@ h3 {
 .main-bg {
   width: 100%;
   position: relative;
-  background-color: #0a0f4d;
-  background-image: linear-gradient(45deg, #390b0f, #0a0f4d);
+//  background-color: #0a0f4d;
+//  background-image: linear-gradient(45deg, #390b0f, #0a0f4d);
+}
+
+.main-bg__img {
+  opacity: 0;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  height: 100vh;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: -1;
+  transition: ease-out 0.3s;
+  
+  img {
+    width: 100%;
+    height: auto;
+  }
+  
+  &::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-image:
+      linear-gradient(45deg, rgba(161,8,22,0.3), rgba(5,21,226,0.3)),
+      linear-gradient(to top, #000, rgba(0,0,0,0));
+  }
+  
+  &--active {
+    opacity: 1;
+    transition: ease-out 0.3s;
+  }
 }
