@@ -245,7 +245,7 @@
   
   <div style="display: none;">
     <div class="modal modal--video" id="video">
-      <iframe src="https://www.youtube.com/embed/jqzbLnHM2no" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+      <iframe src="https://www.youtube.com/embed/jqzbLnHM2no" allowfullscreen></iframe>
       <button type="button" class="modal__close arcticmodal-close"></button>
     </div>
   </div>
@@ -259,18 +259,17 @@
         $("#training").arcticmodal({
           beforeOpen: function(data, el) {
             $('body').css('overflow-y', 'hidden');
-            $('.promo').addClass('blur');
             $('.main-bg').addClass('blur');
+            $('.overlay-nav').addClass('overlay-nav--show');
           },
           afterClose: function(data, el) {
-            $('.promo').removeClass('blur');
+            $('.overlay-nav').removeClass('overlay-nav--show');
             $('.main-bg').removeClass('blur');
             $('body').css('overflow-y', 'scroll');
           },
           overlay: {
             css: {
-              backgroundColor: 'rgba(255,255,255,0)',
-              opacity: .3,
+              opacity: 0,
             }
           }
         });
@@ -282,15 +281,16 @@
           beforeOpen: function(data, el) {
             $('body').css('overflow-y', 'hidden');
             $('.main-bg').addClass('blur');
+            $('.overlay-nav').addClass('overlay-nav--show');
           },
           afterClose: function(data, el) {
+            $('.overlay-nav').removeClass('overlay-nav--show');
             $('.main-bg').removeClass('blur');
             $('body').css('overflow-y', 'scroll');
           },
           overlay: {
             css: {
-              backgroundColor: 'rgba(255,255,255,0)',
-              opacity: .3,
+              opacity: 0,
             }
           }
         });

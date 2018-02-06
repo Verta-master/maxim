@@ -270,7 +270,7 @@
       </a>
       <div class="pages__numbers">
         <a href="#" class="pages__link">1</a>
-        <a href="#" class="pages__link">2</a>
+        <span class="pages__link pages__link--active">2</span>
         <a href="#" class="pages__link">3</a>
         <a href="#" class="pages__link">4</a>
       </div>
@@ -381,15 +381,16 @@
           beforeOpen: function(data, el) {
             $('body').css('overflow-y', 'hidden');
             $('.main-bg').addClass('blur');
+            $('.overlay-nav').addClass('overlay-nav--show');
           },
           afterClose: function(data, el) {
+            $('.overlay-nav').removeClass('overlay-nav--show');
             $('.main-bg').removeClass('blur');
             $('body').css('overflow-y', 'scroll');
           },
           overlay: {
             css: {
-              backgroundColor: 'rgba(255,255,255,0)',
-              opacity: .3,
+              opacity: 0,
             }
           }
         });
