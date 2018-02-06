@@ -186,18 +186,17 @@
         $("#training").arcticmodal({
           beforeOpen: function(data, el) {
             $('body').css('overflow-y', 'hidden');
-            $('.promo').addClass('blur');
             $('.main-bg').addClass('blur');
+            $('.overlay-nav').addClass('overlay-nav--show');
           },
           afterClose: function(data, el) {
-            $('.promo').removeClass('blur');
+            $('.overlay-nav').removeClass('overlay-nav--show');
             $('.main-bg').removeClass('blur');
             $('body').css('overflow-y', 'scroll');
           },
           overlay: {
             css: {
-              backgroundColor: 'rgba(255,255,255,0)',
-              opacity: .3,
+              opacity: 0,
             }
           }
         });
@@ -208,16 +207,17 @@
         $("#call").arcticmodal({
           beforeOpen: function(data, el) {
             $('body').css('overflow-y', 'hidden');
-            $('.promo').addClass('blur');
+            $('.main-bg').addClass('blur');
+            $('.overlay-nav').addClass('overlay-nav--show');
           },
           afterClose: function(data, el) {
-            $('.promo').removeClass('blur');
+            $('.overlay-nav').removeClass('overlay-nav--show');
+            $('.main-bg').removeClass('blur');
             $('body').css('overflow-y', 'scroll');
           },
           overlay: {
             css: {
-              backgroundColor: 'rgba(255,255,255,0)',
-              opacity: .3,
+              opacity: 0,
             }
           }
         });
