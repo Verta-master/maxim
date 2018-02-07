@@ -631,6 +631,27 @@
         });
       });
     });
+    $(".modal__item").click(function(){
+      $(function(){
+        $("#training").arcticmodal({
+          beforeOpen: function(data, el) {
+            $('body').css('overflow-y', 'hidden');
+            $('.main-bg').addClass('blur');
+            $('.overlay-nav').addClass('overlay-nav--show');
+          },
+          afterClose: function(data, el) {
+            $('.overlay-nav').removeClass('overlay-nav--show');
+            $('.main-bg').removeClass('blur');
+            $('body').css('overflow-y', 'scroll');
+          },
+          overlay: {
+            css: {
+              opacity: 0,
+            }
+          }
+        });
+      });
+    });
   </script>
 </body>
 </html>

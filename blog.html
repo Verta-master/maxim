@@ -114,27 +114,20 @@
       <h1>БЛОГ</h1>
       <form action="#" method="get" class="filter">
         <p>Показаны результаты 1-9 из 19</p>
-        <select name="category" id="category" class="filter__select">
-          <option value="">КАТЕГОРИИ</option>
-          <option value="1">БИЗНЕС</option>
-          <option value="2">ТРЕНИНГИ</option>
-          <option value="3">ПУТЕШЕСТВИЯ</option>
-          <option value="4">ОБРАЗ ЖИЗНИ</option>
-          <option value="5">ИНТЕРВЬЮ</option>
-          <option value="6">ВЫСТУПЛЕНИЯ</option>
-          <option value="7">ЛИЧНЫЕ</option>
-        </select>
-        <select name="tag" id="tag" class="filter__select">
-          <option value="">ТЕГИ</option>
-          <option value="1">БИЗНЕС</option>
-          <option value="2">ТРЕНИНГИ</option>
-          <option value="3">ВЫСТУПЛЕНИЯ</option>
-          <option value="4">ЛИЧНЫЕ ЗАПИСИ</option>
-          <option value="5">ОТ МАКСИМА МАРУГИНА</option>
-          <option value="6">МОТИВАЦИЯ</option>
-          <option value="7">БИЗНЕС ЛАНЧ</option>
-          <option value="8">МОТИВАЦИЯ</option>
-        </select>
+        <button type="button" class="filter__select filter__select--category">
+          КАТЕГОРИИ
+          <svg height="24" viewBox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg">
+            <path d="M7.41 7.84L12 12.42l4.59-4.58L18 9.25l-6 6-6-6z"/>
+            <path d="M0-.75h24v24H0z" fill="none"/>
+          </svg>
+        </button>
+        <button type="button" class="filter__select filter__select--tag">
+          ТЕГИ
+           <svg height="24" viewBox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg">
+            <path d="M7.41 7.84L12 12.42l4.59-4.58L18 9.25l-6 6-6-6z"/>
+            <path d="M0-.75h24v24H0z" fill="none"/>
+          </svg>
+        </button>
       </form>
       
       <ul class="blog__list">
@@ -385,6 +378,69 @@
       <button type="button" class="modal__close arcticmodal-close"></button>
     </div>
   </div>
+  
+  <div style="display: none;">
+    <div class="filter-modal" id="category">
+      <h2>КАТЕГОРИИ</h2>
+      <ul class="filter__list">
+        <li class="filter__item">
+          <a href="#" class="filter__category">БИЗНЕС <span>(21)</span></a>
+        </li>
+        <li class="filter__item">
+          <a href="#" class="filter__category">ТРЕНИНГИ <span>(52)</span></a>
+        </li>
+        <li class="filter__item">
+          <a href="#" class="filter__category">ПУТЕШЕСТВИЯ <span>(14)</span></a>
+        </li>
+        <li class="filter__item">
+          <a href="#" class="filter__category">ОБРАЗ ЖИЗНИ <span>(23)</span></a>
+        </li>
+        <li class="filter__item">
+          <a href="#" class="filter__category">ИНТЕРВЬЮ <span>(241)</span></a>
+        </li>
+        <li class="filter__item">
+          <a href="#" class="filter__category">ВЫСТУПЛЕНИЯ <span>(59)</span></a>
+        </li>
+        <li class="filter__item">
+          <a href="#" class="filter__category">ЛИЧНЫЕ <span>(21)</span></a>
+        </li>
+      </ul>
+      <button type="button" class="modal__close arcticmodal-close"></button>
+    </div>
+  </div>
+  
+  <div style="display: none;">
+    <div class="filter-modal" id="tag">
+      <h2>ТЕГИ</h2>
+      <ul class="filter__list">
+        <li class="filter__item-tag">
+          <a href="#" class="filter__tag">БИЗНЕС</a>
+        </li>
+        <li class="filter__item-tag">
+          <a href="#" class="filter__tag">ТРЕНИНГИ</a>
+        </li>
+        <li class="filter__item-tag">
+          <a href="#" class="filter__tag">ВЫСТУПЛЕНИЯ</a>
+        </li>
+        <li class="filter__item-tag">
+          <a href="#" class="filter__tag">ЛИЧНЫЕ ЗАПИСИ</a>
+        </li>
+        <li class="filter__item-tag">
+          <a href="#" class="filter__tag">ОТ МАКСИМА МАРУГИНА</a>
+        </li>
+        <li class="filter__item-tag">
+          <a href="#" class="filter__tag">МОТИВАЦИЯ</a>
+        </li>
+        <li class="filter__item-tag">
+          <a href="#" class="filter__tag">БИЗНЕС ЛАНЧ</a>
+        </li>
+        <li class="filter__item-tag">
+          <a href="#" class="filter__tag">МОТИВАЦИЯ</a>
+        </li>
+      </ul>
+      <button type="button" class="modal__close arcticmodal-close"></button>
+    </div>
+  </div>
 
   <script src="js/jquery-3.2.1.min.js"></script>
   <script src="js/script.js"></script>
@@ -393,6 +449,48 @@
     $(".btn-training").click(function(){
       $(function(){
         $("#training").arcticmodal({
+          beforeOpen: function(data, el) {
+            $('body').css('overflow-y', 'hidden');
+            $('.main-bg').addClass('blur');
+            $('.overlay-nav').addClass('overlay-nav--show');
+          },
+          afterClose: function(data, el) {
+            $('.overlay-nav').removeClass('overlay-nav--show');
+            $('.main-bg').removeClass('blur');
+            $('body').css('overflow-y', 'scroll');
+          },
+          overlay: {
+            css: {
+              opacity: 0,
+            }
+          }
+        });
+      });
+    });
+    $(".filter__select--category").click(function(){
+      $(function(){
+        $("#category").arcticmodal({
+          beforeOpen: function(data, el) {
+            $('body').css('overflow-y', 'hidden');
+            $('.main-bg').addClass('blur');
+            $('.overlay-nav').addClass('overlay-nav--show');
+          },
+          afterClose: function(data, el) {
+            $('.overlay-nav').removeClass('overlay-nav--show');
+            $('.main-bg').removeClass('blur');
+            $('body').css('overflow-y', 'scroll');
+          },
+          overlay: {
+            css: {
+              opacity: 0,
+            }
+          }
+        });
+      });
+    });
+    $(".filter__select--tag").click(function(){
+      $(function(){
+        $("#tag").arcticmodal({
           beforeOpen: function(data, el) {
             $('body').css('overflow-y', 'hidden');
             $('.main-bg').addClass('blur');
