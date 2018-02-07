@@ -70,7 +70,9 @@ function onScroll(event){
     $('.main-bg__img--4').addClass('main-bg__img--active');
     $('.main-bg__img--active').removeClass('blur');
   }
-  if (window.innerWidth < 1680) {
+  if (window.innerWidth < 1229) {
+    $('.footer-main').hide();
+  } else if (window.innerWidth < 1680) {
     if (scrollPos > 150) {
       $('.footer-main').fadeOut();
     } else {
