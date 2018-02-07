@@ -95,6 +95,15 @@
   </header>
   
   <main class="main-bg">
+    <div class="overlay-nav"></div>
+    <div class="gradient"></div>
+    <figure class="main-bg__img main-bg__img--1 main-bg__img--active">
+      <img src="img/bg-training.jpg" alt="МАКСИМ МАРУГИН" width="1920" height="980">
+    </figure>
+    <figure class="main-bg__img main-bg__img--2">
+      <img src="img/bg-main.jpg" alt="МАКСИМ МАРУГИН" width="1920" height="980">
+    </figure>
+    
     <section class="training">
       <div class="wrapper-narrow">
         <nav class="breadcrumbs">
@@ -159,8 +168,8 @@
         <p>Данные тренинг <b>не является</b> тренингом по ТетаХилинг Института THINK, однако в нём используются техники ТетаХилинг и поэтому участие в тренинге возможно после завершения обучения на Базовом и Продвинутом тренингах по ТетаХилинг и наличия сертификатов.</p>
       </div>
       <div class="about__wrap">
-        <a href="#" class="about__pay">оплатить депозит<span>2.000</span></a>
-        <a href="#" class="about__pay">оплатить участие<span>18.000</span></a>
+        <button class="about__pay">оплатить депозит<span>2.000</span></button>
+        <button class="about__pay">оплатить участие<span>18.000</span></button>
       </div>
     </section>
     
@@ -249,6 +258,15 @@
       <button type="button" class="modal__close arcticmodal-close"></button>
     </div>
   </div>
+  
+  <div style="display: none;">
+    <div class="modal modal--pay" id="pay">
+      <h2>ГОТОВО!</h2>
+      <a href="#" class="btn-blue btn-arrow modal__pay-btn">ОПЛАТИТЬ</a>
+      <a href="#" class="modal__payment">ОПЛАТИТЬ НА МЕСТЕ</a>
+      <button type="button" class="modal__close arcticmodal-close"></button>
+    </div>
+  </div>
 
   <script src="js/jquery-3.2.1.min.js"></script>
   <script src="js/script.js"></script>
@@ -278,6 +296,27 @@
     $(".video__play").click(function(){
       $(function(){
         $("#video").arcticmodal({
+          beforeOpen: function(data, el) {
+            $('body').css('overflow-y', 'hidden');
+            $('.main-bg').addClass('blur');
+            $('.overlay-nav').addClass('overlay-nav--show');
+          },
+          afterClose: function(data, el) {
+            $('.overlay-nav').removeClass('overlay-nav--show');
+            $('.main-bg').removeClass('blur');
+            $('body').css('overflow-y', 'scroll');
+          },
+          overlay: {
+            css: {
+              opacity: 0,
+            }
+          }
+        });
+      });
+    });
+    $(".about__pay").click(function(){
+      $(function(){
+        $("#pay").arcticmodal({
           beforeOpen: function(data, el) {
             $('body').css('overflow-y', 'hidden');
             $('.main-bg').addClass('blur');

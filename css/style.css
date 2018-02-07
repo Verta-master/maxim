@@ -478,7 +478,18 @@ h3 {
 }
 .main-bg {
   width: 100%;
+  min-height: 100vh;
   position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
 }
 .main-bg__img {
   opacity: 0;
@@ -963,6 +974,7 @@ h3 {
 .promo__arrow {
   width: 291px;
   height: 51px;
+  padding-bottom: 2px;
   padding-right: 30px;
   margin-left: auto;
   margin-right: auto;
@@ -974,7 +986,7 @@ h3 {
 .promo__arrow::after {
   content: "";
   position: absolute;
-  top: 50%;
+  top: 49%;
   right: 30px;
   -webkit-transform: translateY(-50%);
           transform: translateY(-50%);
@@ -983,6 +995,13 @@ h3 {
   background-image: url(../img/ic_arrow_blue.svg);
   background-size: contain;
   background-repeat: no-repeat;
+  -webkit-transition: ease-out 0.3s;
+  transition: ease-out 0.3s;
+}
+.promo__arrow:hover::after {
+  right: 15px;
+  -webkit-transition: ease-out 0.3s;
+  transition: ease-out 0.3s;
 }
 .promo__list {
   display: -webkit-box;
@@ -1290,6 +1309,9 @@ h3 {
 .social h2 {
   letter-spacing: 4px;
   margin-bottom: 17px;
+}
+.social p a {
+  color: #fff;
 }
 .social--contacts {
   padding-top: 0;
@@ -1710,13 +1732,17 @@ h3 {
   height: 36px;
   background-color: #dcdcdc;
 }
+.breadcrumbs {
+  position: relative;
+  z-index: 1;
+}
 .breadcrumbs__link {
   margin-right: 12px;
   position: relative;
   font-size: 10px;
   font-weight: 700;
   color: #cbcbcb;
-  letter-spacing: px;
+  letter-spacing: 0.2em;
   text-transform: uppercase;
 }
 .breadcrumbs__link::after {
@@ -1860,6 +1886,9 @@ h3 {
   width: 100px;
   padding-left: 30px;
 }
+.timetable__date--plate {
+  display: none;
+}
 .timetable__header p:nth-of-type(2),
 .timetable__city {
   width: 200px;
@@ -1998,11 +2027,17 @@ h3 {
   position: relative;
 }
 .timetable__list--plate .timetable__date {
+  display: none;
+}
+.timetable__list--plate .timetable__date--plate {
+  display: block;
+  width: auto;
   position: absolute;
-  top: 25px;
+  top: 35px;
   left: 50%;
   padding-left: 15px;
   color: #bababa;
+  letter-spacing: 0.1em;
 }
 .timetable__list--plate .timetable__city {
   padding-left: 30px;
@@ -2387,6 +2422,7 @@ h3 {
           transform: translateX(-50%);
 }
 .footer {
+  margin-top: auto;
   position: relative;
   z-index: 1;
 }
@@ -2604,6 +2640,9 @@ h3 {
   display: block;
   border: none;
   border-radius: 20px;
+}
+.modal--pay {
+  padding-bottom: 45px;
 }
 .modal__close {
   position: absolute;
@@ -2971,13 +3010,16 @@ h3 {
   height: 51px;
   margin-left: auto;
   margin-right: auto;
+  margin-top: 30px;
 }
 .modal__payment {
+  display: block;
+  margin-top: 15px;
   font-size: 8px;
   font-weight: 700;
   color: rgba(0, 0, 0, 0.5);
   text-align: center;
-  letter-spacing: 0.1em;
+  letter-spacing: 0.2em;
 }
 .pages {
   margin-bottom: 120px;
@@ -3093,10 +3135,8 @@ h3 {
   width: 100%;
   min-height: 100vh;
   padding-top: 117px;
-  background-image: linear-gradient(45deg, rgba(161, 8, 22, 0.3), rgba(5, 21, 226, 0.3)), linear-gradient(to top, #000, rgba(0, 0, 0, 0)), linear-gradient(to top, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(../img/bg-training.jpg);
-  background-repeat: no-repeat;
-  background-position: center top;
-  background-size: cover;
+  position: relative;
+  z-index: 1;
 }
 .training h1 {
   margin-bottom: 10px;
@@ -3122,8 +3162,8 @@ h3 {
   letter-spacing: 0.05em;
   border-radius: 20px;
   border: 2px solid rgba(255, 255, 255, 0.3);
-  -webkit-box-shadow: 0px 5px 16.92px 1.08px rgba(0, 0, 0, 0.46);
-          box-shadow: 0px 5px 16.92px 1.08px rgba(0, 0, 0, 0.46);
+  -webkit-box-shadow: 0px 3px 10px 1px rgba(0, 0, 0, 0.2);
+          box-shadow: 0px 3px 10px 1px rgba(0, 0, 0, 0.2);
 }
 .training__btn {
   width: 186px;
@@ -3162,6 +3202,8 @@ h3 {
 }
 .about {
   width: 970px;
+  position: relative;
+  z-index: 1;
   margin-left: auto;
   margin-right: auto;
   margin-top: -65px;
@@ -3235,6 +3277,7 @@ h3 {
   font-size: 12px;
   font-weight: 700;
   line-height: 36px;
+  text-align: left;
   letter-spacing: 0.1em;
   text-transform: uppercase;
   border-radius: 4px;
@@ -3248,6 +3291,7 @@ h3 {
 .video {
   margin-bottom: 120px;
   position: relative;
+  z-index: 1;
 }
 .video--blog {
   margin-bottom: 5px;
@@ -3341,6 +3385,8 @@ h3 {
 }
 .info {
   width: 870px;
+  position: relative;
+  z-index: 1;
   padding-top: 115px;
   margin-bottom: 120px;
 }
@@ -3464,6 +3510,7 @@ h3 {
   width: 300px;
   margin-top: 155px;
   position: fixed;
+  z-index: 1;
   top: 0;
   left: calc(50% + 285px);
 }
