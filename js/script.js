@@ -51,11 +51,6 @@ function onScroll(event){
     $('.header').removeClass('bg');
     $('.footer-main__scroll').show();
   }
-  if (scrollPos > decoHeight - scrollPos/5) {
-    $('.footer-main').fadeOut();
-  } else {
-    $('.footer-main').fadeIn();
-  }
   if (scrollPos > 1.2 * window.innerHeight) {
     $('.main-bg__img').removeClass('main-bg__img--active');
     $('.main-bg__img--2').addClass('main-bg__img--active');
@@ -75,6 +70,17 @@ function onScroll(event){
     $('.main-bg__img--4').addClass('main-bg__img--active');
     $('.main-bg__img--active').removeClass('blur');
   }
+  if (window.innerWidth < 1680) {
+    if (scrollPos > 150) {
+      $('.footer-main').fadeOut();
+    } else {
+      $('.footer-main').fadeIn();
+    }
+  } else if (scrollPos > decoHeight - scrollPos/5) {
+      $('.footer-main').fadeOut();
+    } else {
+      $('.footer-main').fadeIn();
+    }
 }
 
 //List and plate-view buttons
