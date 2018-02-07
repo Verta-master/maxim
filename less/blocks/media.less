@@ -98,8 +98,11 @@
   
   .sidebar {
     position: static;
-    padding-top: 115px;
     margin-top: 0;
+    order: 2;
+    width: 100%;
+    max-width: 870px;
+    margin-bottom: 100px;
   }
   
   .sidebar__list {
@@ -107,7 +110,9 @@
   }
   
   .info {
-    padding-top: 50px;
+    order: 1;
+    padding-top: 115px;
+    margin-bottom: 40px;
   }
   
   .main-bg__img {
@@ -116,6 +121,28 @@
       width: auto;
       max-width: none;
     }
+  }
+  
+  .modal--ticket {
+    max-width: 90vw;
+    margin-top: 50px;
+  }
+  
+  .modal__list {
+    display: block;
+  }
+  
+  .modal__item {
+    width: 100%;
+    margin-bottom: 20px;
+  }
+  
+  .footer-main {
+    display: none;
+  }
+  
+  .filter-modal {
+    max-width: 75vw;
   }
 }
 
@@ -373,16 +400,74 @@
   }
   
   .footer__social {
-    margin-left: 0;
     margin-top: 30px;
   }
   
   .footer__bottom {
     flex-wrap: wrap;
-    justify-content: flex-start;
+  }
+  
+  .modal {
+    max-width: 75vw;
+    margin-top: 50px;
+  }
+  
+  .modal__phone--code,
+  .modal__phone--city {
+    width: 25%;
+  }
+  
+  .modal__phone--phone {
+    width: 50%;
+  }
+  
+  .modal__block {
+    padding-left: 20px;
+    top: 40px;
+    
+    h2 {
+      font-size: 16px;
+      line-height: 1.2;
+    }
+  }
+  
+  .modal__text span {
+    display: none;
+  }
+  
+  .modal__main {
+    padding: 20px;
+  }
+  
+  .modal__text .modal__price {
+    width: auto;
+    
+    span {
+      display: inline-block;
+    }
+  }
+  
+  .modal__item {
+    flex-direction: column;
+    padding: 25px;
+  }
+  
+  .modal__right {
+    padding-left: 0;
+    width: 100%;
+    margin-top: 20px;
+    
+    &::before {
+      display: none;
+    }
+  }
+  
+  .filter {
+    flex-wrap: wrap;
   }
 }
 
+//--------------------------
 @media (max-width: 481px) {
   .social__btn--contacts {
     width: 100%;
@@ -421,5 +506,17 @@
   
   .modal--video iframe {
     height: 180px;
+  }
+  
+  .social__btn--contacts {
+    min-height: 40px;
+    
+    span {
+      display: none;
+    }
+  }
+  
+  .footer__social {
+    margin-left: 0;
   }
 }
