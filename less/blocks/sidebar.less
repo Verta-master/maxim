@@ -30,6 +30,10 @@
   &:last-child {
     border-bottom: none;
   }
+  
+  span {
+    color: rgba(203, 203, 203, 0.8);
+  }
 }
 
 .sidebar__link {
@@ -38,7 +42,8 @@
   color: rgba(255, 255, 255, 0.8);
   letter-spacing: 0.1em;
   
-  span {
-    color: rgba(203, 203, 203, 0.8);
+  &:hover,
+  &:active {
+    text-decoration: underline;
   }
 }

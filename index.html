@@ -16,65 +16,71 @@
       </div>
       <nav class="menu menu--closed">
         <button type="button" class="menu__btn">НАВИГАЦИЯ</button>
-        <ul class="menu__list">
-          <li class="menu__item">
-            <a class="menu__link menu__link--active">ГЛАВНАЯ</a>
-          </li>
-          <li class="menu__item">
-            <a href="#" class="menu__link">КТО Я</a>
-          </li>
-          <li class="menu__item">
-            <a href="#" class="menu__link">ТРЕНИНГИ
-              <img src="img/ic_more_horiz_white_24px.svg" alt="ТРЕНИНГИ" width="24" height="24">
-            </a>
-            <ul class="menu__sublist">
-              <li class="menu__subitem">
-                <a href="#" class="menu__link">Манифестация и Изобилие</a>
-              </li>
-              <li class="menu__subitem">
-                <a href="#" class="menu__link">Раскрытие творческой силы</a>
-              </li>
-              <li class="menu__subitem">
-                <a href="training.html" class="menu__link">Предназначение и Следование Божественному Расписанию</a>
-              </li>
-            </ul>
-          </li>
-          <li class="menu__item">
-            <a href="blog.html" class="menu__link">БЛОГ
-              <img src="img/ic_more_horiz_white_24px.svg" alt="БЛОГ" width="24" height="24">
-            </a>
-            <ul class="menu__sublist">
-              <li class="menu__subitem">
-                <a href="blog-page.html" class="menu__link">Пункт 1</a>
-              </li>
-              <li class="menu__subitem">
-                <a href="#" class="menu__link">Пункт 2</a>
-              </li>
-            </ul>
-          </li>
-          <li class="menu__item">
-            <a href="timetable.html" class="menu__link">РАСПИСАНИЕ</a>
-          </li>
-          <li class="menu__item">
-            <a href="cooperation.html" class="menu__link">СОТРУДНИЧЕСТВО</a>
-          </li>
-          <li class="menu__item">
-            <a href="#" class="menu__link">НОВОСТИ
-              <img src="img/ic_more_horiz_white_24px.svg" alt="НОВОСТИ" width="24" height="24">
-            </a>
-            <ul class="menu__sublist">
-              <li class="menu__subitem">
-                <a href="#" class="menu__link">Пункт 1</a>
-              </li>
-              <li class="menu__subitem">
-                <a href="#" class="menu__link">Пункт 2</a>
-              </li>
-            </ul>
-          </li>
-          <li class="menu__item">
-            <a href="contacts.html" class="menu__link">КОНТАКТЫ</a>
-          </li>
-        </ul>
+        <div class="menu__wrap">
+          <ul class="menu__list">
+            <li class="menu__item">
+              <a class="menu__link menu__link--active">ГЛАВНАЯ</a>
+            </li>
+            <li class="menu__item">
+              <a href="#" class="menu__link">КТО Я</a>
+            </li>
+            <li class="menu__item">
+              <a href="#" class="menu__link">ТРЕНИНГИ
+                <img src="img/ic_more_horiz_white_24px.svg" alt="ТРЕНИНГИ" width="24" height="24">
+              </a>
+              <ul class="menu__sublist">
+                <li class="menu__subitem">
+                  <a href="#" class="menu__link">Манифестация и Изобилие</a>
+                </li>
+                <li class="menu__subitem">
+                  <a href="#" class="menu__link">Раскрытие творческой силы</a>
+                </li>
+                <li class="menu__subitem">
+                  <a href="training.html" class="menu__link">Предназначение и Следование Божественному Расписанию</a>
+                </li>
+              </ul>
+            </li>
+            <li class="menu__item">
+              <a href="blog.html" class="menu__link">БЛОГ
+                <img src="img/ic_more_horiz_white_24px.svg" alt="БЛОГ" width="24" height="24">
+              </a>
+              <ul class="menu__sublist">
+                <li class="menu__subitem">
+                  <a href="blog-page.html" class="menu__link">Пункт 1</a>
+                </li>
+                <li class="menu__subitem">
+                  <a href="#" class="menu__link">Пункт 2</a>
+                </li>
+              </ul>
+            </li>
+            <li class="menu__item">
+              <a href="timetable.html" class="menu__link">РАСПИСАНИЕ</a>
+            </li>
+            <li class="menu__item">
+              <a href="cooperation.html" class="menu__link">СОТРУДНИЧЕСТВО</a>
+            </li>
+            <li class="menu__item">
+              <a href="#" class="menu__link">НОВОСТИ
+                <img src="img/ic_more_horiz_white_24px.svg" alt="НОВОСТИ" width="24" height="24">
+              </a>
+              <ul class="menu__sublist">
+                <li class="menu__subitem">
+                  <a href="#" class="menu__link">Пункт 1</a>
+                </li>
+                <li class="menu__subitem">
+                  <a href="#" class="menu__link">Пункт 2</a>
+                </li>
+              </ul>
+            </li>
+            <li class="menu__item">
+              <a href="contacts.html" class="menu__link">КОНТАКТЫ</a>
+            </li>
+          </ul>
+          <form action="#" method="post" class="header__subscribe">
+            <input type="text" name="email" class="footer__input" placeholder="ВВЕДИТЕ ВАШ EMAIL">
+            <button type="submit" class="btn footer__btn">ПОДПИСАТЬСЯ НА НОВОСТИ</button>
+          </form>
+        </div>
       </nav>
       <a href="#" class="header__link location" title="Город">КРАСНОДАР</a>
     </div>
@@ -116,6 +122,8 @@
         <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa.</p>
         <button type="button" class="btn-full promo__btn btn-training">ЗАПИСЬ НА ТРЕНИНГ</button>
       </div>
+      <span class="promo__deco"></span>
+      <button class="promo__scroll">СКРОЛЛЬТЕ</button>
     </section>
     
     <section class="who wrapper">
@@ -218,7 +226,7 @@
           </figure>
         </li>
       </ul>
-      <a href="#" class="nav-link">ПЕРЕЙТИ К ТРЕНИНГАМ</a>
+      <a href="popular.html" class="nav-link">ПЕРЕЙТИ К ТРЕНИНГАМ</a>
     </section>
 
     <section class="timetable wrapper">
@@ -247,7 +255,7 @@
             <h4 class="timetable__title">БАЗОВЫЙ КУРС «thetahealing»</h4>
             <p class="timetable__price">ОТ <span>25.000</span></p>
             <p class="timetable__btns timetable__btns--order">
-              <a href="training.html" class="btn-blue timetable__btn timetable__btn--order">ПОДРОБНЕЕ</a>
+              <a href="training.html" target="_blank" class="btn-blue timetable__btn timetable__btn--order">ПОДРОБНЕЕ</a>
               <button type="button" class="timetable__order btn-ticket">ЗАПИСЬ</button>
             </p>
           </div>
@@ -263,7 +271,7 @@
             <h4 class="timetable__title">БАЗОВЫЙ КУРС «thetahealing»</h4>
             <p class="timetable__price"><span>5.000</span></p>
             <p class="timetable__btns">
-              <a href="training.html" class="btn-blue timetable__btn">ПОДРОБНЕЕ</a>
+              <a href="training.html" target="_blank" class="btn-blue timetable__btn">ПОДРОБНЕЕ</a>
               <span class="timetable__noplace">НЕТ МЕСТ</span>
             </p>
           </div>
@@ -279,7 +287,7 @@
             <h4 class="timetable__title">БАЗОВЫЙ КУРС «thetahealing»</h4>
             <p class="timetable__price"><span>5.000</span></p>
             <p class="timetable__btns">
-              <a href="training.html" class="btn-blue timetable__btn">ПОДРОБНЕЕ</a>
+              <a href="training.html" target="_blank" class="btn-blue timetable__btn">ПОДРОБНЕЕ</a>
               <span class="timetable__noplace">НЕТ МЕСТ</span>
             </p>
           </div>
@@ -295,7 +303,7 @@
             <h4 class="timetable__title">Предназначение и Следование Божественному Расписанию</h4>
             <p class="timetable__price"><span>5.000</span></p>
             <p class="timetable__btns">
-              <a href="training.html" class="btn-blue timetable__btn">ПОДРОБНЕЕ</a>
+              <a href="training.html" target="_blank" class="btn-blue timetable__btn">ПОДРОБНЕЕ</a>
               <span class="timetable__noplace">НЕТ МЕСТ</span>
             </p>
           </div>
@@ -454,8 +462,6 @@
   
   <footer class="footer-main">
     <p>© Copyright maxim marugin</p>
-    <span class="footer-main__deco"></span>
-    <button class="footer-main__scroll">СКРОЛЛЬТЕ</button>
     <p>Designed by <a href="http://laylaydigital.ru/">Lay Lay</a></p>
   </footer>
   

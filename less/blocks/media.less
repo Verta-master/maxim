@@ -2,6 +2,10 @@
   .about {
     margin-top: 100px;
   }
+  
+  .modal {
+    top: 100px;
+  }
 }
 
 @media (max-width: 1229px) {
@@ -144,6 +148,10 @@
   .filter-modal {
     max-width: 75vw;
   }
+  
+  .menu__wrap {
+    left: 40px;
+  }
 }
 
 //------------------------------
@@ -237,6 +245,16 @@
   .info {
     width: 100%;
   }
+  
+  .header__subscribe {
+    display: block;
+    margin-top: 100px;
+  }
+  
+  .promo__deco,
+  .promo__scroll {
+    display: none !important;
+  }
 }
 
 //-----------------------
@@ -278,6 +296,13 @@
     display: none;
   }
   
+  .popular__text {
+    h4,
+    p {
+      max-width: 100%;
+    }
+  }
+  
   .location {
     padding-left: 0;
   }
@@ -306,9 +331,21 @@
     justify-content: center;
   }
   
+  .popular__info {
+    margin-top: 60px;
+  }
+  
   .popular__btn {
     margin-right: 0;
     margin-bottom: 20px;
+  }
+  
+  .popular__place {
+    padding-left: 27px;
+  }
+  
+  .popular__text h4 {
+    margin-top: 0;
   }
   
   .who__btn-full {
@@ -351,6 +388,11 @@
     .timetable__title {
       margin-bottom: 40px;
     }
+    
+    .timetable__city {
+      margin-top: 20px;
+      margin-bottom: 0;
+    }
   }
   
   .couch {
@@ -369,10 +411,11 @@
     flex-wrap: wrap;
     justify-content: center;
     overflow: hidden;
+    background-color: rgba(255,255,255,0);
   }
   
   .subscribe__input {
-    width: 90%;
+    width: 100%;
     height: 40px;
     padding-left: 10px;
     text-align: center;
@@ -380,7 +423,8 @@
   }
   
   .subscribe__btn {
-    width: 90%;
+    width: 100%;
+    margin-top: 20px;
   }
   
   .blog__item {
@@ -410,6 +454,10 @@
   .modal {
     max-width: 75vw;
     margin-top: 50px;
+    
+    &--ticket {
+      min-width: 81vw;
+    }
   }
   
   .modal__phone--code,
@@ -423,9 +471,10 @@
   
   .modal__block {
     padding-left: 20px;
-    top: 40px;
+    top: 60px;
     
     h2 {
+      margin-bottom: 40px;
       font-size: 16px;
       line-height: 1.2;
     }
@@ -464,6 +513,22 @@
   
   .filter {
     flex-wrap: wrap;
+  }
+  
+  .filter__select {
+    padding: 0;
+    margin-right: 70px;
+  }
+  
+  .blog h1 {
+    padding-left: 28px;
+  }
+  
+  .filter-modal {
+    .modal__close {
+      top: -10px;
+      right: -30px;
+    }
   }
 }
 
@@ -520,3 +585,10 @@
     margin-left: 0;
   }
 }
+
+//----------------------------
+//@media (max-width: 766px) and (orientation: landscape) {
+//  .gradient {
+//    overflow-y: scroll !important;
+//  }
+//}
