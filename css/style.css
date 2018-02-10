@@ -801,6 +801,10 @@ h3 {
   -webkit-filter: blur(10px);
           filter: blur(10px);
 }
+.blur-mobile {
+  -webkit-filter: blur(7px) brightness(0.3);
+          filter: blur(7px) brightness(0.3);
+}
 .overlay {
   width: 100%;
   height: 100vh;
@@ -4037,6 +4041,9 @@ h3 {
   .modal--ticket {
     min-width: 81vw;
   }
+  .modal__close {
+    right: -42px;
+  }
   .modal__phone--code,
   .modal__phone--city {
     width: 25%;
@@ -4097,6 +4104,7 @@ h3 {
   }
   .header__subscribe .footer__input {
     width: 265px;
+    max-width: 265px;
   }
   .menu__wrap {
     left: auto;

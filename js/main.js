@@ -106,6 +106,7 @@ function onWindowChange() {
     $('.title__list').hide();
     $('.title__plate').hide();
     $('.timetable__list').addClass('timetable__list--plate');
+    $('.main-bg__img--2').addClass('blur-mobile');
   } else {
     $('.title__list').show();
     $('.title__plate').show();
