@@ -63,27 +63,13 @@ function onScroll(event){
   }
 }
 
-//List and plate-view buttons
-var btnPlate = document.querySelector('.title__plate');
-var btnList = document.querySelector('.title__list');
-var listView = document.querySelector('.timetable__list');
-btnPlate.addEventListener("click", function() {
-  listView.classList.add('timetable__list--plate');
-  btnList.classList.remove('title__btn-active');
-  btnPlate.classList.add('title__btn-active');
-});
-btnList.addEventListener("click", function() {
-  listView.classList.remove('timetable__list--plate');
-  btnList.classList.add('title__btn-active');
-  btnPlate.classList.remove('title__btn-active');
-});
-
 //Media-queries
 function onWindowChange() {
   if (window.innerWidth < 1022) {
     $('.title__list').hide();
     $('.title__plate').hide();
     $('.timetable__list').addClass('timetable__list--plate');
+    $('.main-bg__img').addClass('blur-mobile');
   } else {
     $('.title__list').show();
     $('.title__plate').show();
