@@ -9,7 +9,7 @@
 </head>
 <body>
   <header class="header">
-    <div class="header__block">
+    <div class="header__block header__block--left">
       <a href="index.html" class="logo">
         <img src="img/logo.png" alt="Logo" width="42" height="39">
         <p>Marugin Maxim</p>
@@ -87,6 +87,7 @@
     <div class="header__block header__block--right">
       <a href="cooperation.html" class="header__link">СОТРУДНИЧЕСТВО</a>
       <button type="button" class="btn header__btn btn-training">ЗАПИСЬ НА ТРЕНИНГ</button>
+      <a href="popular.html" class="btn header__btn header__training">ТРЕНИНГИ</a>
       <ul class="social-btns">
         <li class="social-btns__item">
           <a href="#" class="social-btns__link social-btns__link--yt"><span class="visually-hidden">Youtube</span></a>
@@ -161,12 +162,12 @@
         $("#training").arcticmodal({
           beforeOpen: function(data, el) {
             $('body').css('overflow-y', 'hidden');
-            $('.main-bg').addClass('blur');
+            $('.main-bg').addClass('blur-nav');
             $('.overlay-nav').addClass('overlay-nav--show');
           },
           afterClose: function(data, el) {
             $('.overlay-nav').removeClass('overlay-nav--show');
-            $('.main-bg').removeClass('blur');
+            $('.main-bg').removeClass('blur-nav');
             $('body').css('overflow-y', 'scroll');
           },
           overlay: {
