@@ -191,4 +191,7 @@ circles.on('appear', function() {
     
     circle.data('inited', true);
   }
+  setTimeout(function () {
+    $(circle.circleProgress('widget')).stop();
+  }, 2000);
 });
