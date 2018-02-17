@@ -72,6 +72,7 @@ function onScroll(event){
   } else {
     $('.main-bg__img').removeClass('main-bg__img--active');
     $('.main-bg__img--1').addClass('main-bg__img--active');
+    $('.main-bg__img--active').removeClass('blur-mobile');
   }
   
   if (window.innerWidth < 1229) {
@@ -130,12 +131,11 @@ $(document).ready(function(){
 
 //Circles
 var circles = $('.value__circle');
+var circle_viewed = false;
+var offset = circles.offset(); 
 
-circles.appear({ force_process: true });
-
-circles.on('appear', function() {
-  var circle = $(this);
-  if (!circle.data('inited')) {
+$(window).scroll(function() {
+  if ((($(document).scrollTop()) > ((parseFloat(offset.top)) - parseFloat($(window).height()))) && (!(circle_viewed ))) {
     $('#circle1').circleProgress({
       value: 0.13,
       size: 150,
@@ -195,7 +195,7 @@ circles.on('appear', function() {
     }).on('circle-animation-progress', function(event, progress, stepValue) {
       $(this).find('strong').html(Math.round(stepValue * 100) + '<span>%</span>');
     });
-    
-    circle.data('inited', true);
+
+    circle_viewed = true;
   }
 });
