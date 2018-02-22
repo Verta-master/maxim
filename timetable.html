@@ -78,7 +78,7 @@
           </ul>
           <form action="#" method="post" class="header__subscribe">
             <input type="text" name="email" class="footer__input" placeholder="ВВЕДИТЕ ВАШ EMAIL">
-            <button type="submit" class="btn footer__btn">ПОДПИСАТЬСЯ НА НОВОСТИ</button>
+            <button type="submit" class="btn footer__btn">ПОДПИСАТЬСЯ<span>&nbsp;НА НОВОСТИ</span></button>
           </form>
         </div>
       </nav>
@@ -252,7 +252,7 @@
           </div>
           <form action="#" method="post" class="footer__subscribe">
             <input type="text" name="email" class="footer__input" placeholder="ВВЕДИТЕ ВАШ EMAIL">
-            <button type="submit" class="btn footer__btn">ПОДПИСАТЬСЯ НА<span> НА НОВОСТИ</span></button>
+            <button type="submit" class="btn footer__btn">ПОДПИСАТЬСЯ<span>&nbsp;НА НОВОСТИ</span></button>
           </form>
         </div>
         <div class="footer__contacts">
@@ -464,14 +464,12 @@
       $(function(){
         $("#training").arcticmodal({
           beforeOpen: function(data, el) {
-            $('body').css('overflow-y', 'hidden');
             $('.modal--ticket').addClass('blur-mobile');
             $('.overlay-nav').addClass('overlay-nav--show');
           },
           afterClose: function(data, el) {
             $('.overlay-nav').removeClass('overlay-nav--show');
             $('.modal--ticket').removeClass('blur-mobile');
-            $('body').css('overflow-y', 'scroll');
           },
           overlay: {
             css: {
