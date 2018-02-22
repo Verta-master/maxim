@@ -56,14 +56,13 @@ function onScroll(event){
   } else {
     $('.header').removeClass('bg');
   }
-  if (window.innerWidth < 1229) {
-    $('.footer-main').hide();
+  if (window.innerWidth < 1680 && window.innerWidth > 1229 && scrollPos > decoHeight * 0.5) {
+    $('.sidebar').addClass('sidebar--relative');
+    var offset = $('.sidebar').offset();
+    $('.sidebar').css({top: 'auto', bottom: 400});
   } else {
-    if (scrollPos > 150) {
-      $('.footer-main').fadeOut();
-    } else {
-      $('.footer-main').fadeIn();
-    }
+    $('.sidebar').removeClass('sidebar--relative');
+    $('.sidebar').css({top: 0, bottom: 'auto'});
   }
 }
 

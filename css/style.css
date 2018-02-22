@@ -801,6 +801,8 @@ h3 {
 .blur-nav {
   -webkit-filter: blur(10px);
           filter: blur(10px);
+  -webkit-transition: ease-out 0.5s;
+  transition: ease-out 0.5s;
 }
 .blur-mobile {
   -webkit-filter: blur(7px) brightness(0.3);
@@ -1262,7 +1264,7 @@ h3 {
 .social-btns__link--yt {
   background-image: url(../img/icon-youtube.png);
   background-size: 10px 12px;
-  background-position: 15px 10px;
+  background-position: 15px 12px;
 }
 .social-btns__link--vk {
   background-image: url(../img/icon-vk.png);
@@ -1272,7 +1274,7 @@ h3 {
 .social-btns__link--in {
   background-image: url(../img/icon-instagram.png);
   background-size: 15px 15px;
-  background-position: 12px 10px;
+  background-position: 12px 9px;
 }
 .social {
   max-width: 100%;
@@ -2584,7 +2586,6 @@ h3 {
 }
 .modal {
   position: relative;
-  top: 100px;
   z-index: 1000;
   width: 370px;
   padding: 35px 30px;
@@ -2619,6 +2620,9 @@ h3 {
 }
 .modal--pay {
   padding-bottom: 45px;
+}
+.modal--ticket {
+  top: 100px;
 }
 .modal__close {
   position: absolute;
@@ -3290,6 +3294,7 @@ h3 {
   top: 48%;
 }
 .video__img {
+  min-height: 455px;
   border-radius: 25px;
   overflow: hidden;
 }
@@ -3426,7 +3431,7 @@ h3 {
 }
 .filter__tag {
   min-height: 36px;
-  padding: 10px 16px;
+  padding: 12px 16px 10px 16px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -3599,7 +3604,7 @@ h3 {
 }
 .sidebar {
   width: 300px;
-  margin-top: 155px;
+  margin-top: 175px;
   position: fixed;
   z-index: 1;
   top: 0;
@@ -3612,6 +3617,9 @@ h3 {
   text-transform: uppercase;
   color: rgba(255, 255, 255, 0.2);
   letter-spacing: 0.2em;
+}
+.sidebar--relative {
+  position: absolute;
 }
 .sidebar__list {
   padding: 0 30px;
@@ -3648,6 +3656,9 @@ h3 {
   .header__link {
     font-size: 0;
   }
+  .location {
+    font-size: 10px;
+  }
   .menu__btn {
     margin-left: 30px;
     margin-right: 30px;
@@ -3674,6 +3685,7 @@ h3 {
     display: none !important;
   }
   .location {
+    font-size: 0;
     width: 40px;
     height: 40px;
     border-radius: 50%;
@@ -3774,7 +3786,6 @@ h3 {
   }
   .modal--ticket {
     max-width: 90vw;
-    margin-top: 50px;
   }
   .modal__list {
     display: block;
@@ -4056,7 +4067,7 @@ h3 {
   }
   .modal {
     max-width: 75vw;
-    margin-top: 50px;
+    top: 50px;
   }
   .modal--ticket {
     min-width: 81vw;
